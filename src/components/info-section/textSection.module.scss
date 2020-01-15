@@ -12,14 +12,20 @@
   letter-spacing: -0.05rem;
   color: $grey-900;
   margin: 6rem 0 2rem 2rem;
+  @include mediaLg {
+    font-size: $section-header-Lg;
+  }
 }
 
 .description {
   color: $grey-700;
-  font-size: 1.5rem;
+  font-size: $tertiary-header;
   font-weight: $regular;
   line-height: 1.6;
   margin: 0 0 0 2rem;
+  @include mediaLg {
+    font-size: $tertiary-header-Lg;
+  }
 }
 
 .contact-button-wrapper {

@@ -10,7 +10,7 @@ const About = ({ aboutSectionRef }) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        limit: 2
+        limit: 1
         filter: { relativeDirectory: { eq: "about-section" } }
         sort: { fields: birthtime, order: DESC }
       ) {

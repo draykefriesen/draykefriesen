@@ -14,6 +14,9 @@
   width: 275px;
   padding-bottom: 8rem;
   box-shadow: $box-shadow;
+  @include mediaLg {
+    width: 200px;
+  }
 }
 
 .card-one {
@@ -64,5 +67,7 @@
 .svg-illustration {
   width: 300px;
   display: block;
-  //transform: translateY(-120px);
+  @include mediaLg {
+    width: 225px;
+  }
 }

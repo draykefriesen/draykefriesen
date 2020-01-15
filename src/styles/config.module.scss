@@ -40,8 +40,10 @@ $medium: 500;
 $bold: 700;
 //sizes
 $section-header: 3.5rem;
+$section-header-Lg: 2.5rem;
 $secondary-header: 2rem;
 $tertiary-header: 1.5rem;
+$tertiary-header-Lg: 1.2rem;
 
 // Shadows
 $box-shadow: 0 2px 4px #00000044;
@@ -79,17 +81,17 @@ $box-shadow-mini: 0 1px 2px #00000044;
 }
 
 @mixin mediaMd {
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     @content;
   }
 }
 @mixin mediaLg {
-  @media (min-width: 1024px) {
+  @media (max-width: 1100px) {
     @content;
   }
 }
 @mixin mediaXl {
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1101px) {
     @content;
   }
 }

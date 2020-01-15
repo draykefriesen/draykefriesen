@@ -5,43 +5,38 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding: 0.2rem 0;
+  padding-right: 2rem;
   position: absolute;
+  background: transparent;
   z-index: 100;
 }
 
-// Navigation //
-
 .header-nav {
-  margin-left: auto;
-  margin-right: 1rem;
-  @include mediaSm {
-    margin: 0;
-  }
+  //margin-left: auto;
+  // margin-right: 1rem;
+  width: 100%;
 }
 
 .nav-list-wrapper {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  padding: 10px 0 0 0;
-  margin: 0;
-  width: 100%;
-  @include mediaSm {
-    bottom: 0;
-    left: 0;
-    position: fixed;
+  padding: 2rem 2rem 0 2rem;
+  margin: 0 0 0 auto;
+  width: 50%;
+  @include mediaLg {
+    width: 100%;
     justify-content: space-around;
-    padding: 0;
-    background: $not-black;
+    padding: 2rem 0 0;
   }
 }
 
 .nav-item {
-  margin: 0.8rem 1.6rem 0.6rem;
-  @include mediaSm {
-    margin: 0.4rem 0;
-  }
+  margin: 0;
+  // margin: 0.8rem 1.6rem 0.6rem;
+  // @include mediaSm {
+  //   margin: 0;
+  // }
 }
 
 .nav-text {
@@ -54,11 +49,12 @@
     color: $grey-900;
     cursor: pointer;
   }
+
   @include mediaSm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
     font-size: 1.1rem;
   }
 }
@@ -71,10 +67,5 @@
 }
 
 .youtube-btn {
-  margin-right: 3rem;
-  padding-top: 10px;
-  @include mediaSm {
-    margin-right: 1.5rem;
-    margin-left: auto;
-  }
+  width: 100px;
 }

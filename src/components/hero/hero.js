@@ -4,7 +4,7 @@ import heroStyles from "./hero.module.scss"
 
 const HeroSection = () => {
   useEffect(() => {
-    const timer = window.setInterval(lineAnimation, 2500)
+    const timer = window.setInterval(lineAnimation, 2200)
 
     return () => {
       window.clearInterval(timer)
@@ -153,7 +153,7 @@ const HeroSection = () => {
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 100"
-        className={heroStyles.svgLine}
+        className={heroStyles.svgShapes}
       >
         <AnimatePath
           d={points.interpolate(

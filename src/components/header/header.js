@@ -58,18 +58,18 @@ const Header = ({ scroll }) => {
               Contact
             </p>
           </li>
+          <li className={headerStyles.navItem}>
+            <div
+              className={`${headerStyles.youtubeBtn} g-ytsubscribe`}
+              data-channelid="UCADSoOuc1_VD4qxgIJVZtZA"
+              data-layout="default"
+              data-theme="dark"
+              data-count="default"
+            ></div>
+          </li>
         </ul>
       </nav>
-      <div className={headerStyles.youtubeBtn}>
-        <div
-          style={{ width: "100px" }}
-          className="g-ytsubscribe"
-          data-channelid="UCADSoOuc1_VD4qxgIJVZtZA"
-          data-layout="default"
-          data-theme="dark"
-          data-count="default"
-        ></div>
-      </div>
+      <div></div>
     </a.header>
   )
 }
