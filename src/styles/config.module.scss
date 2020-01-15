@@ -1,0 +1,95 @@
+// Primary colors
+$primary-color: hsl(238, 41%, 34%);
+$primary-color-50: hsl(238, 41%, 50%);
+$primary-color-40: hsl(238, 100%, 83%);
+$primary-color-35: hsl(238, 100%, 85%);
+$primary-color-30: hsl(238, 100%, 87%);
+$primary-color-25: hsl(238, 100%, 89%);
+$primary-color-20: hsl(238, 100%, 91%);
+$primary-color-17: hsl(238, 100%, 92%);
+$primary-color-15: hsl(238, 100%, 93%);
+$primary-color-12: hsl(238, 100%, 94%);
+$primary-color-10: hsl(238, 100%, 95%);
+$primary-color-5: hsl(238, 100%, 97%);
+$primary-color-1: hsl(238, 100%, 99%);
+
+$faded-peach: hsl(14, 100%, 90%);
+$pale-blue: hsl(207, 100%, 90%);
+
+//Greys
+$grey-100: hsl(204, 45%, 98%);
+$grey-150: hsl(204, 45%, 96%);
+$grey-200: hsl(210, 38%, 95%);
+$grey-300: hsl(214, 32%, 91%);
+$grey-400: hsl(211, 25%, 84%);
+$grey-500: hsl(214, 20%, 69%);
+$grey-600: hsl(216, 15%, 52%);
+$grey-700: hsl(218, 17%, 35%);
+$grey-800: hsl(218, 23%, 23%);
+$grey-900: hsl(220, 26%, 14%);
+
+$neutral-color: #525252;
+$white: #fff;
+$black: #000;
+$not-black: #282828;
+$light-grey: #e5e5e5;
+
+//Weights
+$regular: 400;
+$medium: 500;
+$bold: 700;
+//sizes
+$section-header: 3.5rem;
+$secondary-header: 2rem;
+$tertiary-header: 1.5rem;
+
+// Shadows
+$box-shadow: 0 2px 4px #00000044;
+$box-shadow-mini: 0 1px 2px #00000044;
+
+@mixin iconWrapper {
+  //background: $primary-color-50;
+  border-radius: 50%;
+  //padding: 0.2rem;
+  display: inline-flex;
+}
+
+@mixin borderStripes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0;
+  transform: skew(-12deg) rotate(-12deg);
+  z-index: -200;
+}
+
+// Transition Eases
+@mixin easeOut {
+  transition: all 0.3s ease;
+}
+
+@mixin easeOutFast {
+  transition: all 0.15s ease;
+}
+
+@mixin mediaSm {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}

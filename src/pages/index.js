@@ -1,21 +1,39 @@
-import React from "react"
-import { Link } from "gatsby"
-
+import React, { useRef } from "react"
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Hero from "../components/hero/hero"
+import InfoSection from "../components/info-section/InfoSection"
+import About from "../components/about/about"
+import YoutubeVideoSection from "../components/youtube-videos-section/YoutubeVideosSection"
+import Contact from "../components/contact/Contact"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const aboutRef = useRef()
+  const videoRef = useRef()
+  const contactRef = useRef()
+
+  const handleScroll = datatype => {
+    if (datatype === "aboutLink") {
+      aboutRef.current.scrollIntoView({ block: "start", behavior: "smooth" })
+    }
+    if (datatype === "videoLink") {
+      videoRef.current.scrollIntoView({ block: "start", behavior: "smooth" })
+    }
+    if (datatype === "contactLink") {
+      contactRef.current.scrollIntoView({ block: "end", behavior: "smooth" })
+    }
+  }
+
+  return (
+    <Layout scroll={handleScroll}>
+      <SEO title="Home" />
+      <Hero />
+      <InfoSection scroll={handleScroll} />
+      <About aboutSectionRef={aboutRef} />
+      <YoutubeVideoSection videoSectionRef={videoRef} />
+      <Contact contactCardRef={contactRef} />
+    </Layout>
+  )
+}
 
 export default IndexPage

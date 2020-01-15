@@ -1,0 +1,206 @@
+@import "../../styles/config.module.scss";
+
+.contact-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    $primary-color-15,
+    transparent 35%,
+    transparent 75%,
+    $primary-color-15
+  );
+  padding: 22rem 0 8rem 0;
+}
+
+.contact-header {
+  grid-column: 1 / -1;
+  font-size: $section-header;
+  font-weight: $bold;
+  margin: 0 0 0 2rem;
+  color: $grey-900;
+}
+
+.card-wrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.contact-info-card-wrapper {
+  display: inline-block;
+}
+
+.contact-info-card {
+  display: inline-block;
+  background: linear-gradient($primary-color-12 75%, $primary-color-17 25%);
+  border-radius: 5px;
+  box-shadow: $box-shadow-mini;
+  width: calc(100% / 4);
+  margin: 2rem -3rem 2rem 0;
+  z-index: -1;
+}
+
+.contact-info-card-border-top {
+  height: 0.6rem;
+  width: 100%;
+  background: linear-gradient(to right, $primary-color-20, $primary-color-25);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.contact-info-card-header {
+  margin: 1rem 1rem 0.8rem;
+  font-size: 1rem;
+  color: $grey-800;
+}
+
+.contact-info-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 1rem;
+}
+
+.contact-info-card-list-item {
+  color: $grey-800;
+  margin: 0 0 0.2rem;
+  &::before {
+    content: "\203A ";
+    font-size: 1.2rem;
+    color: $primary-color-30;
+  }
+}
+
+// position relative on contact-card to keep transformed sub-card in same stacking context
+.contact-card {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  background: $primary-color-10;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+}
+
+.contact-card-border-top {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  height: 0.8rem;
+  width: 100%;
+  background: linear-gradient(to right, $primary-color-15, $primary-color-20);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.contact-card-title {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  font-size: $tertiary-header;
+  font-weight: $bold;
+  color: $grey-800;
+  margin: 2rem 2rem 0;
+}
+
+.text-block-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1.4rem 0;
+
+  //nth-of-type added one because of <div> border being nth-of-type(1)
+  &:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  &:nth-of-type(3) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  &:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  &:nth-of-type(5) {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+
+.icon-wrapper {
+  @include iconWrapper;
+  margin-left: 1.8rem;
+}
+
+.contact-icon {
+  color: $grey-600;
+}
+
+.contact-link {
+  margin: 0 1rem;
+  color: $grey-800;
+  font-size: 1.2rem;
+  font-weight: $medium;
+}
+
+.secondary-media-section {
+  grid-column: 1 / -1;
+  grid-row: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  width: 100%;
+  padding: 1.6rem 0;
+  background: $primary-color-15;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.secondary-contact-header {
+  margin: 0 0 0 2rem;
+  font-size: 0.8rem;
+  color: $grey-600;
+  justify-self: start;
+}
+
+.secondary-logo-block {
+  @include iconWrapper;
+  grid-column: 2 / 3;
+  grid-row: 1;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+.secondary-contact-icon-link {
+  display: flex;
+  align-items: center;
+}
+
+.secondary-contact-icon {
+  color: $grey-500;
+}
+
+.background-stripes {
+  @include borderStripes;
+  top: 0;
+  left: 0;
+  span {
+    display: inline-block;
+    position: absolute;
+    border-radius: 3px;
+    &:first-child {
+      height: 14%;
+      width: 100%;
+      background: $grey-300;
+      top: 15%;
+    }
+    &:nth-child(2) {
+      height: 8%;
+      width: 50%;
+      background: $grey-400;
+      top: 25%;
+      left: 55%;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "../../styles/config.module.scss";
+
+.info-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  position: relative;
+  background: linear-gradient(
+    $primary-color-15 0%,
+    transparent 25%,
+    transparent 65%,
+    $primary-color-15
+  );
+  padding: 10rem 0;
+}
+
+.background-stripes {
+  @include borderStripes;
+  top: 0;
+  left: 0;
+  span {
+    display: inline-block;
+    position: absolute;
+    border-radius: 3px;
+    &:first-child {
+      height: 12%;
+      width: 100%;
+      background: $grey-300;
+    }
+    &:nth-child(2) {
+      height: 7%;
+      width: 50%;
+      background: $grey-400;
+      top: 10%;
+      left: 55%;
+    }
+    &:nth-child(3) {
+      height: 10%;
+      width: 100%;
+      background: $grey-400;
+      bottom: -2%;
+      left: 0;
+    }
+    &:nth-child(4) {
+      height: 8%;
+      width: 50%;
+      background: $grey-300;
+      bottom: 3%;
+      left: 0;
+    }
+  }
+}

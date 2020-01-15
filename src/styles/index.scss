@@ -1,0 +1,16 @@
+@import "./config.module.scss";
+@import url("https://use.typekit.net/pdx3ntj.css");
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: forma-djr-text, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background: $grey-100;
+}
+
+.footer {
+  background: $primary-color-15;
+}

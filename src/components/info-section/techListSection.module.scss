@@ -1,0 +1,115 @@
+@import "../../styles/config.module.scss";
+
+.tech-list-wrapper {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 4;
+  width: 100%;
+}
+
+.tech-list-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+  width: 35%;
+  margin: 0 0 0 2rem;
+  padding: 0;
+  background: $primary-color-10;
+  box-shadow: $box-shadow;
+  box-sizing: border-box;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.border-top {
+  height: 0.8rem;
+  grid-column: 1 / -1;
+  background: linear-gradient(to right, $primary-color-15, $primary-color-20);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.tech-title {
+  font-size: $tertiary-header;
+  font-weight: $bold;
+  color: $grey-800;
+  &:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 2rem 2rem 1rem;
+  }
+  &:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 4;
+    margin: 0 2rem 1rem;
+  }
+}
+
+.tech-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 1rem;
+  margin: 0 2rem 2rem 1.75rem;
+  padding: 0;
+  &:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  &:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+}
+
+.tech-list-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  &:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  &:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  &:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  &:nth-child(4) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  &:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  p {
+    display: inline-block;
+    color: $grey-700;
+    font-weight: $medium;
+    margin: 0.2rem 0 0 0.3rem;
+  }
+}
+
+.icon-wrapper {
+  @include iconWrapper;
+}
+
+.tech-icon {
+  color: $grey-600;
+}
+
+.background-chevron {
+  position: absolute;
+  width: 15%;
+  top: 15%;
+  left: 35%;
+  transform: rotate(-12deg);
+  opacity: 0.8;
+  z-index: 1;
+}
