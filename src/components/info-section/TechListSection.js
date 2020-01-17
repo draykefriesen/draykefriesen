@@ -20,31 +20,31 @@ const TechListSection = () => {
         <ul className={techListStyles.techList}>
           <li className={techListStyles.techListItem}>
             <div className={techListStyles.iconWrapper}>
-              <DiHtml5 size={20} className={techListStyles.techIcon} />
+              <DiHtml5 className={techListStyles.techIcon} />
             </div>
             <p>HTML</p>
           </li>
           <li className={techListStyles.techListItem}>
             <div className={techListStyles.iconWrapper}>
-              <DiCss3 size={20} className={techListStyles.techIcon} />
+              <DiCss3 className={techListStyles.techIcon} />
             </div>
             <p>CSS</p>
           </li>
           <li className={techListStyles.techListItem}>
             <div className={techListStyles.iconWrapper}>
-              <DiJavascript1 size={20} className={techListStyles.techIcon} />
+              <DiJavascript1 className={techListStyles.techIcon} />
             </div>
             <p>JavaScript</p>
           </li>
           <li className={techListStyles.techListItem}>
             <div className={techListStyles.iconWrapper}>
-              <DiReact size={20} className={techListStyles.techIcon} />
+              <DiReact className={techListStyles.techIcon} />
             </div>
             <p>React</p>
           </li>
           <li className={techListStyles.techListItem}>
             <div className={techListStyles.iconWrapper}>
-              <DiSass size={20} className={techListStyles.techIcon} />
+              <DiSass className={techListStyles.techIcon} />
             </div>
             <p>Scss</p>
           </li>
@@ -53,13 +53,13 @@ const TechListSection = () => {
         <ul className={techListStyles.techList}>
           <li className={techListStyles.techListItem}>
             <div className={techListStyles.iconWrapper}>
-              <DiIllustrator size={20} className={techListStyles.techIcon} />
+              <DiIllustrator className={techListStyles.techIcon} />
             </div>
             <p>Illustrator</p>
           </li>
           <li className={techListStyles.techListItem}>
             <div className={techListStyles.iconWrapper}>
-              <DiGit size={20} className={techListStyles.techIcon} />
+              <DiGit className={techListStyles.techIcon} />
             </div>
             <p>Git</p>
           </li>

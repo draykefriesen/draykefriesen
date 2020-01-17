@@ -5,6 +5,10 @@
   grid-column: 1 / -1;
   grid-row: 4;
   width: 100%;
+  @include mediaMd {
+    display: flex;
+    grid-row: 5;
+  }
 }
 
 .tech-list-card {
@@ -20,10 +24,19 @@
   box-sizing: border-box;
   border-radius: 5px;
   z-index: 100;
+  @include mediaLg {
+    width: 45%;
+  }
+
+  @include mediaMd {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .border-top {
   height: 0.8rem;
+  max-width: 100%;
   grid-column: 1 / -1;
   background: linear-gradient(to right, $primary-color-15, $primary-color-20);
   border-top-right-radius: 5px;
@@ -74,10 +87,16 @@
   &:nth-child(2) {
     grid-column: 2;
     grid-row: 1;
+    @include mediaMd {
+      margin-left: 1rem;
+    }
   }
   &:nth-child(3) {
     grid-column: 3;
     grid-row: 1;
+    @include mediaMd {
+      margin-left: 1rem;
+    }
   }
   &:nth-child(4) {
     grid-column: 1;
@@ -86,6 +105,9 @@
   &:nth-child(5) {
     grid-column: 2;
     grid-row: 2;
+    @include mediaMd {
+      margin-left: 1rem;
+    }
   }
 
   p {
@@ -102,6 +124,7 @@
 
 .tech-icon {
   color: $grey-600;
+  font-size: 20px;
 }
 
 .background-chevron {
@@ -112,4 +135,10 @@
   transform: rotate(-12deg);
   opacity: 0.8;
   z-index: 1;
+  @include mediaLg {
+    left: 45%;
+  }
+  @include mediaMd {
+    left: 85%;
+  }
 }

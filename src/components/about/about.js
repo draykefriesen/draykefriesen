@@ -19,8 +19,8 @@ const About = ({ aboutSectionRef }) => {
             name
             birthTime(formatString: "YYYY MMMM DD")
             childImageSharp {
-              fixed(width: 250) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 350) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -29,13 +29,13 @@ const About = ({ aboutSectionRef }) => {
     }
   `)
 
-  const portraitImage = data.allFile.edges[0].node.childImageSharp.fixed
+  const portraitImage = data.allFile.edges[0].node.childImageSharp.fluid
   return (
     <section className={aboutStyles.aboutWrapper}>
       <div ref={aboutSectionRef} style={{ marginBottom: "145px" }}></div>
       <div className={aboutStyles.titleImageWrapper}>
         <h2 className={aboutStyles.aboutHeader}>About</h2>
-        <Img fixed={portraitImage} className={aboutStyles.portraitImage} />
+        <Img fluid={portraitImage} className={aboutStyles.portraitImage} />
         <BackgroundCircles className={aboutStyles.backgroundCircles} />
         <BackgroundChevron className={aboutStyles.backgroundChevron} />
       </div>
@@ -44,7 +44,7 @@ const About = ({ aboutSectionRef }) => {
 
         <div className={aboutStyles.textBlockWrapper}>
           <div className={aboutStyles.iconWrapper}>
-            <IoIosPin size={26} className={aboutStyles.aboutIcon} />
+            <IoIosPin className={aboutStyles.aboutIcon} />
           </div>
           <p className={aboutStyles.aboutText}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
@@ -55,7 +55,7 @@ const About = ({ aboutSectionRef }) => {
         </div>
         <div className={aboutStyles.textBlockWrapper}>
           <div className={aboutStyles.iconWrapper}>
-            <IoIosSchool size={26} className={aboutStyles.aboutIcon} />
+            <IoIosSchool className={aboutStyles.aboutIcon} />
           </div>
           <p className={aboutStyles.aboutText}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
@@ -66,7 +66,7 @@ const About = ({ aboutSectionRef }) => {
         </div>
         <div className={aboutStyles.textBlockWrapper}>
           <div className={aboutStyles.iconWrapper}>
-            <IoIosVideocam size={26} className={aboutStyles.aboutIcon} />
+            <IoIosVideocam className={aboutStyles.aboutIcon} />
           </div>
           <p className={aboutStyles.aboutText}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit

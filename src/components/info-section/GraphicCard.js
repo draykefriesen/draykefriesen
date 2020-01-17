@@ -17,15 +17,15 @@ const GraphicCard = ({ type }) => {
         <div className={graphicCardStyles.borderTop}></div>
         <ul className={graphicCardStyles.textList}>
           <li className={graphicCardStyles.listItem}>
-            <IoIosAnalytics size={16} className={graphicCardStyles.icon} />
+            <IoIosAnalytics className={graphicCardStyles.icon} />
             <p>Accessible & Performant</p>
           </li>
           <li className={graphicCardStyles.listItem}>
-            <IoIosAnalytics size={16} className={graphicCardStyles.icon} />
+            <IoIosAnalytics className={graphicCardStyles.icon} />
             <p>Accessible & Performant</p>
           </li>
           <li className={graphicCardStyles.listItem}>
-            <IoIosAnalytics size={16} className={graphicCardStyles.icon} />
+            <IoIosAnalytics className={graphicCardStyles.icon} />
             <p>Accessible & Performant</p>
           </li>
         </ul>
