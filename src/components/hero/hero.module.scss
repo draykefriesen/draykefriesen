@@ -1,7 +1,6 @@
 @import "../../styles/config.module.scss";
 
 .hero-section {
-  // position: relative;
   box-sizing: border-box;
   display: flex;
   height: 100vh;
@@ -19,12 +18,11 @@
   align-self: center;
   margin: 0 auto;
   overflow: visible;
-  transform: translateY(10%);
+  transform: translateY(12%);
   width: 400px;
-  // max-width: 50%;
   z-index: 100;
   @include mediaSm {
-    width: 250px;
+    width: 275px;
   }
 }
 

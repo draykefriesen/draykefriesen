@@ -5,20 +5,18 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding-right: 2rem;
   position: absolute;
   background: transparent;
   z-index: 100;
 }
 
 .header-nav {
-  //margin-left: auto;
-  // margin-right: 1rem;
   width: 100%;
 }
 
 .nav-list-wrapper {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
   list-style: none;
   padding: 2rem 2rem 0 2rem;
@@ -33,10 +31,6 @@
 
 .nav-item {
   margin: 0;
-  // margin: 0.8rem 1.6rem 0.6rem;
-  // @include mediaSm {
-  //   margin: 0;
-  // }
 }
 
 .nav-text {
@@ -51,10 +45,6 @@
   }
 
   @include mediaSm {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
     font-size: 1.1rem;
   }
 }
@@ -64,8 +54,4 @@
   @include mediaSm {
     display: inline-block;
   }
-}
-
-.youtube-btn {
-  width: 100px;
 }

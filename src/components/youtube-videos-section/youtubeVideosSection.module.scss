@@ -19,6 +19,9 @@
   font-size: $section-header;
   color: $grey-900;
   margin-top: 0;
+  @include mediaLg {
+    font-size: $section-header-Lg;
+  }
 }
 
 .list-wrapper {
@@ -43,7 +46,7 @@
     @include mediaSm {
       grid-row: 2;
       grid-column: 1 / -1;
-      margin-top: 1rem;
+      margin-top: 1.25rem;
     }
   }
   h4 {
@@ -55,7 +58,7 @@
     }
     @include mediaSm {
       grid-column: 1 / -1;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
   }
 }

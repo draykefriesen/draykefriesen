@@ -51,9 +51,7 @@ $box-shadow: 0 2px 4px #00000044;
 $box-shadow-mini: 0 1px 2px #00000044;
 
 @mixin iconWrapper {
-  //background: $primary-color-50;
   border-radius: 50%;
-  //padding: 0.2rem;
   display: inline-flex;
 }
 
