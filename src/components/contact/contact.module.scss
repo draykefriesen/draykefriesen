@@ -10,7 +10,7 @@
     transparent 75%,
     $primary-color-15
   );
-  padding: 22rem 0 8rem 0;
+  padding: 22rem 0 4rem 0;
 }
 
 .contact-header {
@@ -161,6 +161,7 @@
 }
 
 .contact-icon {
+  font-size: 1.5rem;
   color: $grey-600;
 }
 
@@ -217,6 +218,7 @@
 
 .secondary-contact-icon {
   color: $grey-500;
+  font-size: 1.2rem;
 }
 
 .background-stripes {

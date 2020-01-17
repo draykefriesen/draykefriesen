@@ -83,7 +83,20 @@
 .text-block-wrapper {
   display: flex;
   align-items: flex-start;
-  padding: 2rem 0;
+  padding: 0;
+  &:nth-of-type(2) {
+    padding: 2rem 0;
+
+    .about-text {
+      margin: 0;
+      font-weight: $medium;
+      line-height: 1.5;
+    }
+  }
+
+  &:nth-of-type(4) {
+    padding: 1rem 0 2rem 0;
+  }
 }
 
 .icon-wrapper {
@@ -95,17 +108,16 @@
 }
 
 .about-icon {
+  font-size: 1.3rem;
   color: $grey-600;
-  font-size: 26px;
-  @include mediaSm {
-    font-size: 22px;
-  }
+  transform: translate(-20%, -12%);
 }
 
 .about-text {
-  margin: 0 1rem;
+  font-size: 1rem;
+  margin: 0 2rem 0 0;
   color: $grey-900;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .background-circles {

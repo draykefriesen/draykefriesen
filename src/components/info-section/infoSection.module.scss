@@ -33,6 +33,9 @@
       background: $grey-400;
       top: 10%;
       left: 55%;
+      @include mediaMd {
+        height: 5%;
+      }
     }
     &:nth-child(3) {
       height: 9%;

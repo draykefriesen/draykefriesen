@@ -60,7 +60,7 @@ const Contact = ({ contactCardRef }) => {
           <h3 className={contactStyles.contactCardTitle}>Reach me here</h3>
           <div className={contactStyles.textBlockWrapper}>
             <div className={contactStyles.iconWrapper}>
-              <IoIosMail size={26} className={contactStyles.contactIcon} />
+              <IoIosMail className={contactStyles.contactIcon} />
               <a
                 href="mailto:draykefriesen@gmail.com"
                 className={contactStyles.contactLink}
@@ -71,7 +71,7 @@ const Contact = ({ contactCardRef }) => {
           </div>
           <div className={contactStyles.textBlockWrapper}>
             <div className={contactStyles.iconWrapper}>
-              <IoIosCall size={26} className={contactStyles.contactIcon} />
+              <IoIosCall className={contactStyles.contactIcon} />
               <a
                 href="tel:+1-204-232-2967"
                 className={contactStyles.contactLink}
@@ -82,10 +82,7 @@ const Contact = ({ contactCardRef }) => {
           </div>
           <div className={contactStyles.textBlockWrapper}>
             <div className={contactStyles.iconWrapper}>
-              <IoLogoInstagram
-                size={26}
-                className={contactStyles.contactIcon}
-              />
+              <IoLogoInstagram className={contactStyles.contactIcon} />
               <a
                 href="https://instagram.com/draykefriesen"
                 className={contactStyles.contactLink}
@@ -97,7 +94,7 @@ const Contact = ({ contactCardRef }) => {
 
           <div className={contactStyles.textBlockWrapper}>
             <div className={contactStyles.iconWrapper}>
-              <IoLogoTwitter size={26} className={contactStyles.contactIcon} />
+              <IoLogoTwitter className={contactStyles.contactIcon} />
               <a
                 href="https://twitter.com/draykefriesen"
                 className={contactStyles.contactLink}
@@ -116,26 +113,19 @@ const Contact = ({ contactCardRef }) => {
                 href="https://www.youtube.com/channel/UCADSoOuc1_VD4qxgIJVZtZA"
                 className={contactStyles.secondaryContactIconLink}
               >
-                <IoLogoYoutube
-                  size={22}
-                  className={contactStyles.secondaryContactIcon}
-                />
+                <IoLogoYoutube className={contactStyles.secondaryContactIcon} />
               </a>
               <a
                 href="https://codepen.io/draykefriesen"
                 className={contactStyles.secondaryContactIconLink}
               >
-                <DiCodepen
-                  size={22}
-                  className={contactStyles.secondaryContactIcon}
-                />
+                <DiCodepen className={contactStyles.secondaryContactIcon} />
               </a>
               <a
                 href="https://dribbble.com/draykefriesen"
                 className={contactStyles.secondaryContactIconLink}
               >
                 <IoLogoDribbble
-                  size={22}
                   className={contactStyles.secondaryContactIcon}
                 />
               </a>
@@ -143,10 +133,7 @@ const Contact = ({ contactCardRef }) => {
                 href="https://www.reddit.com/user/draykefriesen"
                 className={contactStyles.secondaryContactIconLink}
               >
-                <IoLogoReddit
-                  size={22}
-                  className={contactStyles.secondaryContactIcon}
-                />
+                <IoLogoReddit className={contactStyles.secondaryContactIcon} />
               </a>
             </div>
           </div>

@@ -18,9 +18,7 @@ const Layout = ({ children, scroll }) => {
   return (
     <>
       <Header scroll={scroll} siteTitle={data.site.siteMetadata.title} />
-
       <main>{children}</main>
-      <footer className={"footer"}>© {new Date().getFullYear()}</footer>
     </>
   )
 }

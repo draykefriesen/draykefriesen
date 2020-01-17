@@ -3,7 +3,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundCircles from "../../media/svg/background-circles.svg"
 import BackgroundChevron from "../../media/svg/background-chevron.svg"
-import { IoIosPin, IoIosSchool, IoIosVideocam } from "react-icons/io"
+import {
+  IoIosPin,
+  IoIosCode,
+  IoIosCheckmarkCircleOutline,
+} from "react-icons/io"
 import aboutStyles from "./about.module.scss"
 
 const About = ({ aboutSectionRef }) => {
@@ -46,33 +50,28 @@ const About = ({ aboutSectionRef }) => {
           <div className={aboutStyles.iconWrapper}>
             <IoIosPin className={aboutStyles.aboutIcon} />
           </div>
+          <p className={aboutStyles.aboutText}>Winnipeg, Manitoba.</p>
+        </div>
+        <div className={aboutStyles.textBlockWrapper}>
+          <div className={aboutStyles.iconWrapper}>
+            {/* <IoIosCode className={aboutStyles.aboutIcon} /> */}
+          </div>
           <p className={aboutStyles.aboutText}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
-            iure cupiditate corporis nostrum quo nam! Dolore accusamus veniam,
-            perferendis, tenetur explicabo, mollitia dignissimos beatae
-            repudiandae impedit exercitationem officia sed placeat!
+            My involvment in web-development and web-design started in late
+            2018. Since then I have continued to learn new skills aswell as grow
+            my knowledge of the fundemental technologies and design-patterns.
+            When it comes to projects my goal is to always create fast, usable,
+            and visually appealing interfaces that work accross all devices.
           </p>
         </div>
         <div className={aboutStyles.textBlockWrapper}>
           <div className={aboutStyles.iconWrapper}>
-            <IoIosSchool className={aboutStyles.aboutIcon} />
+            {/* <IoIosCode className={aboutStyles.aboutIcon} /> */}
           </div>
           <p className={aboutStyles.aboutText}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
-            iure cupiditate corporis nostrum quo nam! Dolore accusamus veniam,
-            perferendis, tenetur explicabo, mollitia dignissimos beatae
-            repudiandae impedit exercitationem officia sed placeat!
-          </p>
-        </div>
-        <div className={aboutStyles.textBlockWrapper}>
-          <div className={aboutStyles.iconWrapper}>
-            <IoIosVideocam className={aboutStyles.aboutIcon} />
-          </div>
-          <p className={aboutStyles.aboutText}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
-            iure cupiditate corporis nostrum quo nam! Dolore accusamus veniam,
-            perferendis, tenetur explicabo, mollitia dignissimos beatae
-            repudiandae impedit exercitationem officia sed placeat!
+            I ocassionally make videos sharing my work process, illustrations,
+            code, and general tips relating to web-deveoplment and web-design.
+            check them out below.
           </p>
         </div>
       </div>

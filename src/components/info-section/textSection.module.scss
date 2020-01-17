@@ -18,6 +18,12 @@
   @include mediaLg {
     font-size: $section-header-Lg;
   }
+  @include mediaMd {
+    margin-top: 15rem;
+  }
+  @include mediaSm {
+    margin-top: 20rem;
+  }
 }
 
 .description {
@@ -37,8 +43,11 @@
   justify-self: center;
   text-align: center;
   margin: 12rem 0;
-  @include mediaSm {
+  @include mediaMd {
     margin: 20rem 0;
+  }
+  @include mediaSm {
+    margin: 22rem 0;
   }
 }
 

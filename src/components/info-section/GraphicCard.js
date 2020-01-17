@@ -2,7 +2,7 @@ import React from "react"
 import WebDevIcon from "../../media/svg/web-dev-card.svg"
 import WebDesignIcon from "../../media/svg/web-design-card.svg"
 import graphicCardStyles from "./graphicCard.module.scss"
-import { IoIosAnalytics } from "react-icons/io"
+import { IoIosCheckmarkCircleOutline } from "react-icons/io"
 
 const GraphicCard = ({ type }) => {
   return (
@@ -16,18 +16,51 @@ const GraphicCard = ({ type }) => {
       <div className={graphicCardStyles.card}>
         <div className={graphicCardStyles.borderTop}></div>
         <ul className={graphicCardStyles.textList}>
-          <li className={graphicCardStyles.listItem}>
-            <IoIosAnalytics className={graphicCardStyles.icon} />
-            <p>Accessible & Performant</p>
-          </li>
-          <li className={graphicCardStyles.listItem}>
-            <IoIosAnalytics className={graphicCardStyles.icon} />
-            <p>Accessible & Performant</p>
-          </li>
-          <li className={graphicCardStyles.listItem}>
-            <IoIosAnalytics className={graphicCardStyles.icon} />
-            <p>Accessible & Performant</p>
-          </li>
+          {type === "web-dev" && (
+            <>
+              <li className={graphicCardStyles.listItem}>
+                <IoIosCheckmarkCircleOutline
+                  className={graphicCardStyles.icon}
+                />
+                <p>Blogs</p>
+              </li>
+              <li className={graphicCardStyles.listItem}>
+                <IoIosCheckmarkCircleOutline
+                  className={graphicCardStyles.icon}
+                />
+                <p>Portfolios</p>
+              </li>
+              <li className={graphicCardStyles.listItem}>
+                <IoIosCheckmarkCircleOutline
+                  className={graphicCardStyles.icon}
+                />
+                <p>E-commerce</p>
+              </li>
+            </>
+          )}
+
+          {type === "web-design" && (
+            <>
+              <li className={graphicCardStyles.listItem}>
+                <IoIosCheckmarkCircleOutline
+                  className={graphicCardStyles.icon}
+                />
+                <p>Custom Web-Design</p>
+              </li>
+              <li className={graphicCardStyles.listItem}>
+                <IoIosCheckmarkCircleOutline
+                  className={graphicCardStyles.icon}
+                />
+                <p>SVG Illustration & Animiation</p>
+              </li>
+              <li className={graphicCardStyles.listItem}>
+                <IoIosCheckmarkCircleOutline
+                  className={graphicCardStyles.icon}
+                />
+                <p>Brand Identity</p>
+              </li>
+            </>
+          )}
         </ul>
       </div>
       {type === "web-dev" && (

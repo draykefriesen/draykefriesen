@@ -16,8 +16,9 @@ const TextHeader = ({ scroll }) => {
           Web solutions for all people and businesses
         </h2>
         <p className={textAreaStyles.description}>
-          small business, entreprenuer, or hobbyist, ill work to build the
-          website that suites your needs
+          I aim to create web sites and web apps that meet the specific needs of
+          your business or project. I specialize in custom interfaces that
+          extends your brand or personality onto the web.
         </p>
       </div>
       <div className={textAreaStyles.contactButtonWrapper}>
