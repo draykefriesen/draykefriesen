@@ -1,5 +1,6 @@
 import React from "react"
 import { useSpring, animated as a, config } from "react-spring"
+import { IoIosCheckmarkCircleOutline, IoIosCode } from "react-icons/io"
 import textAreaStyles from "./textSection.module.scss"
 
 const TextHeader = ({ scroll }) => {
@@ -12,14 +13,31 @@ const TextHeader = ({ scroll }) => {
   return (
     <>
       <div className={textAreaStyles.mainTextWrapper}>
-        <h2 className={textAreaStyles.textSectionTitle}>
-          Web solutions for all people and businesses
-        </h2>
+        <h2 className={textAreaStyles.textSectionTitle}>What I do</h2>
         <p className={textAreaStyles.description}>
-          I aim to create web sites and web apps that meet the specific needs of
-          your business or project. I specialize in custom interfaces that
-          extends your brand or personality onto the web.
+          I design, code, and illustrate for the web.
         </p>
+        <ul className={textAreaStyles.list}>
+          <li className={textAreaStyles.listItem}>
+            <IoIosCheckmarkCircleOutline className={textAreaStyles.listIcon} />
+            <p className={textAreaStyles.listItemText}>
+              custom designs with full mockups
+            </p>
+          </li>
+          <li className={textAreaStyles.listItem}>
+            <IoIosCheckmarkCircleOutline className={textAreaStyles.listIcon} />
+            <p className={textAreaStyles.listItemText}>
+              practical code to achieve the design and functionality of the
+              project
+            </p>
+          </li>
+          <li className={textAreaStyles.listItem}>
+            <IoIosCheckmarkCircleOutline className={textAreaStyles.listIcon} />
+            <p className={textAreaStyles.listItemText}>
+              illustrations, icons, and logos
+            </p>
+          </li>
+        </ul>
       </div>
       <div className={textAreaStyles.contactButtonWrapper}>
         <p className={textAreaStyles.buttonParagraph}>

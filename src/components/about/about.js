@@ -3,11 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundCircles from "../../media/svg/background-circles.svg"
 import BackgroundChevron from "../../media/svg/background-chevron.svg"
-import {
-  IoIosPin,
-  IoIosCode,
-  IoIosCheckmarkCircleOutline,
-} from "react-icons/io"
+import { IoIosPin } from "react-icons/io"
 import aboutStyles from "./about.module.scss"
 
 const About = ({ aboutSectionRef }) => {

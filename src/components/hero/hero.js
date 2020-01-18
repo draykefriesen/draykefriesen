@@ -120,13 +120,13 @@ const HeroSection = () => {
     from: {
       a: "459",
       b: "377",
-      c: "327",
+      c: "340",
       d: "858",
       e: "307",
       opacity: 0,
       strokeOpacity: 1,
-      slide1Y: "-200",
-      slide2X: "-500",
+      slide1Y: "-1000",
+      slide2X: "-1000",
     },
     to: async next => {
       await next({
@@ -307,7 +307,7 @@ const HeroSection = () => {
             stroke="#718096"
             fontSize="105"
             strokeDashoffset={animateSvgText.c}
-            strokeDasharray="327"
+            strokeDasharray="340"
           >
             for the
           </a.tspan>

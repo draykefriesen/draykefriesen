@@ -14,7 +14,7 @@
   line-height: 1;
   letter-spacing: -0.05rem;
   color: $grey-900;
-  margin: 6rem 2rem 2rem 2rem;
+  margin: 6rem 2rem 1.5rem 2rem;
   @include mediaLg {
     font-size: $section-header-Lg;
   }
@@ -27,14 +27,37 @@
 }
 
 .description {
-  color: $grey-700;
+  color: $grey-800;
   font-size: $tertiary-header;
-  font-weight: $regular;
+  font-weight: $medium;
   line-height: 1.6;
-  margin: 0 2rem;
+  margin: 0 0 0 2rem;
   @include mediaLg {
     font-size: $tertiary-header-Lg;
   }
+}
+
+.list {
+  list-style: none;
+}
+
+.list-item {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.list-icon {
+  position: absolute;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  color: $primary-color-45;
+}
+
+.list-item-text {
+  color: $grey-800;
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0 2rem;
 }
 
 .contact-button-wrapper {
