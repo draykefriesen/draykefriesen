@@ -41,11 +41,6 @@ const About = ({ aboutSectionRef }) => {
       </div>
       <div className={aboutStyles.aboutCard}>
         <div className={aboutStyles.cardBorderTop}></div>
-
-        {/* <div className={aboutStyles.textBlockWrapper}>
-          <IoIosPin className={aboutStyles.aboutIcon} />
-          <p className={aboutStyles.aboutText}>Winnipeg, Canada.</p>
-        </div> */}
         <div className={aboutStyles.textBlockWrapper}>
           <p className={aboutStyles.aboutText}>
             I'm Drayke Friesen, a web developer and designer living in Winnipeg,
