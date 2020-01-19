@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Drayke Friesen Portfolio`,
-    description: `web-developer, web-designer and illustrator.`,
+    title: `Drayke Friesen`,
+    description: `web developer, web designer and illustrator.`,
     author: `@draykefriesen`,
   },
   plugins: [
@@ -32,7 +32,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#CCCEFF`,
         theme_color: `#CCCEFF`,
-        display: `minimal-ui`,
+        display: `browser`,
         icon: `src/media/svg/letter-logo.svg`, // This path is relative to the root of the site.
       },
     },

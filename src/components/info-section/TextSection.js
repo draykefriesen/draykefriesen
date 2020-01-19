@@ -1,6 +1,6 @@
 import React from "react"
 import { useSpring, animated as a, config } from "react-spring"
-import { IoIosCheckmarkCircleOutline, IoIosCode } from "react-icons/io"
+import { IoIosCheckmarkCircleOutline } from "react-icons/io"
 import textAreaStyles from "./textSection.module.scss"
 
 const TextHeader = ({ scroll }) => {
@@ -15,26 +15,27 @@ const TextHeader = ({ scroll }) => {
       <div className={textAreaStyles.mainTextWrapper}>
         <h2 className={textAreaStyles.textSectionTitle}>What I do</h2>
         <p className={textAreaStyles.description}>
-          I design, code, and illustrate for the web.
+          I <b>design</b>, <b>code</b>, and <b>illustrate</b> for the web.{" "}
+          <br /> My goal is to always create fast, usable, and visually
+          appealing interfaces that work accross all devices.
         </p>
         <ul className={textAreaStyles.list}>
           <li className={textAreaStyles.listItem}>
             <IoIosCheckmarkCircleOutline className={textAreaStyles.listIcon} />
             <p className={textAreaStyles.listItemText}>
-              custom designs with full mockups
+              custom designs and mockups.
             </p>
           </li>
           <li className={textAreaStyles.listItem}>
             <IoIosCheckmarkCircleOutline className={textAreaStyles.listIcon} />
             <p className={textAreaStyles.listItemText}>
-              practical code to achieve the design and functionality of the
-              project
+              bring designs to life through practical code.
             </p>
           </li>
           <li className={textAreaStyles.listItem}>
             <IoIosCheckmarkCircleOutline className={textAreaStyles.listIcon} />
             <p className={textAreaStyles.listItemText}>
-              illustrations, icons, and logos
+              illustrations, icons, and logos.
             </p>
           </li>
         </ul>

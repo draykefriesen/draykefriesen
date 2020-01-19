@@ -21,6 +21,9 @@
   @include mediaLg {
     font-size: $section-header-Lg;
   }
+  // @include mediaMd {
+  //   margin-top: 6rem;
+  // }
 }
 
 .title-image-wrapper {
@@ -29,6 +32,9 @@
   justify-content: space-between;
   transform: translateY(-50%);
   height: 80px;
+  @include mediaMd {
+    margin-top: 5rem;
+  }
 }
 
 .portrait-image {
@@ -84,37 +90,21 @@
   display: flex;
   align-items: flex-start;
   padding: 0;
-  &:nth-of-type(2) {
-    padding: 2rem 0;
-
-    .about-text {
-      margin: 0;
-      font-weight: $medium;
-      line-height: 1.5;
-    }
-  }
-
-  &:nth-of-type(4) {
-    padding: 1rem 0 2rem 0;
-  }
-}
-
-.icon-wrapper {
-  @include iconWrapper;
-  margin-left: 2rem;
+  margin: 2rem 0 2rem 2rem;
   @include mediaSm {
     margin-left: 1rem;
   }
 }
 
 .about-icon {
+  vertical-align: middle;
   font-size: 1.3rem;
   color: $grey-600;
   transform: translate(-20%, -12%);
 }
 
 .about-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0 2rem 0 0;
   color: $grey-900;
   line-height: 1.6;
@@ -173,7 +163,7 @@
       left: 55%;
     }
     &:nth-child(3) {
-      height: 20%;
+      height: 15%;
       width: 100%;
       background: $grey-400;
       bottom: 0;

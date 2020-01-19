@@ -14,7 +14,7 @@
   line-height: 1;
   letter-spacing: -0.05rem;
   color: $grey-900;
-  margin: 6rem 2rem 1.5rem 2rem;
+  margin: 6rem 2rem 1rem 2rem;
   @include mediaLg {
     font-size: $section-header-Lg;
   }
@@ -28,10 +28,10 @@
 
 .description {
   color: $grey-800;
-  font-size: $tertiary-header;
+  font-size: $tertiary-header-Lg;
   font-weight: $medium;
-  line-height: 1.6;
-  margin: 0 0 0 2rem;
+  line-height: 1.4;
+  margin: 0 1rem 0 2rem;
   @include mediaLg {
     font-size: $tertiary-header-Lg;
   }
@@ -39,6 +39,8 @@
 
 .list {
   list-style: none;
+  padding-left: 2rem;
+  margin-top: 2rem;
 }
 
 .list-item {
@@ -49,13 +51,13 @@
 .list-icon {
   position: absolute;
   vertical-align: middle;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: $primary-color-45;
 }
 
 .list-item-text {
   color: $grey-800;
-  font-size: 1rem;
+  font-size: 1.2rem;
   display: inline-block;
   margin: 0 2rem;
 }

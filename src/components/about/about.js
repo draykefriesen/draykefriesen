@@ -42,31 +42,35 @@ const About = ({ aboutSectionRef }) => {
       <div className={aboutStyles.aboutCard}>
         <div className={aboutStyles.cardBorderTop}></div>
 
+        {/* <div className={aboutStyles.textBlockWrapper}>
+          <IoIosPin className={aboutStyles.aboutIcon} />
+          <p className={aboutStyles.aboutText}>Winnipeg, Canada.</p>
+        </div> */}
         <div className={aboutStyles.textBlockWrapper}>
-          <div className={aboutStyles.iconWrapper}>
-            <IoIosPin className={aboutStyles.aboutIcon} />
-          </div>
-          <p className={aboutStyles.aboutText}>Winnipeg, Manitoba.</p>
-        </div>
-        <div className={aboutStyles.textBlockWrapper}>
-          <div className={aboutStyles.iconWrapper}>
-            {/* <IoIosCode className={aboutStyles.aboutIcon} /> */}
-          </div>
           <p className={aboutStyles.aboutText}>
-            My involvment in web-development and web-design started in late
-            2018. Since then I have continued to learn new skills aswell as grow
-            my knowledge of the fundemental technologies and design-patterns.
-            When it comes to projects my goal is to always create fast, usable,
-            and visually appealing interfaces that work accross all devices.
+            I'm Drayke Friesen, a web developer and designer living in Winnipeg,
+            Canada. My involvment in web development and design started in late
+            2018 and ever since I have continued to learn new skills while still
+            growing my knowledge of fundemental technologies and
+            design-patterns.
           </p>
         </div>
         <div className={aboutStyles.textBlockWrapper}>
-          <div className={aboutStyles.iconWrapper}>
-            {/* <IoIosCode className={aboutStyles.aboutIcon} /> */}
-          </div>
           <p className={aboutStyles.aboutText}>
-            I ocassionally make videos sharing my work process, illustrations,
-            code, and general tips relating to web-deveoplment and web-design.
+            When I'm not working on the web I like to spend time with my
+            girlfriend and family. In the winter I enjoy playing hockey on the
+            outdoor rinks here in Winnipeg. When the weather warms up I like to
+            go camping, hiking, and swimming at some of the beautiful lakes we
+            have in the area. I also really enjoy cooking for the people around
+            me and I'm always trying out new recipes or just winging it when it
+            feels right. If I have any spare time left I'll take that
+            opportunity to sit down and play guitar.
+          </p>
+        </div>
+        <div className={aboutStyles.textBlockWrapper}>
+          <p className={aboutStyles.aboutText}>
+            I also make videos sharing some of my work process, illustrations,
+            code, and general tips relating to web deveoplment and web design.
             check them out below.
           </p>
         </div>
