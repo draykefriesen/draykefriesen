@@ -44,22 +44,9 @@ const About = ({ aboutSectionRef }) => {
         <div className={aboutStyles.textBlockWrapper}>
           <p className={aboutStyles.aboutText}>
             I'm Drayke Friesen, a web developer and designer living in Winnipeg,
-            Canada. My involvment in web development and design started in late
-            2018 and ever since I have continued to learn new skills while still
-            growing my knowledge of fundemental technologies and
-            design-patterns.
-          </p>
-        </div>
-        <div className={aboutStyles.textBlockWrapper}>
-          <p className={aboutStyles.aboutText}>
-            When I'm not working on the web I like to spend time with my
-            girlfriend and family. In the winter I enjoy playing hockey on the
-            outdoor rinks here in Winnipeg. When the weather warms up I like to
-            go camping, hiking, and swimming at some of the beautiful lakes we
-            have in the area. I also really enjoy cooking for the people around
-            me and I'm always trying out new recipes or just winging it when it
-            feels right. If I have any spare time left I'll take that
-            opportunity to sit down and play guitar.
+            Manitoba. When I'm not working on the web I like to spend time with
+            friends and family. I enjoy playing hockey, going camping, cooking,
+            and playing guitar.
           </p>
         </div>
         <div className={aboutStyles.textBlockWrapper}>

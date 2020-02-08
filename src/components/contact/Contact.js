@@ -9,6 +9,7 @@ import {
   IoLogoYoutube,
   IoLogoReddit,
 } from "react-icons/io"
+import { AiOutlineBehance } from "react-icons/ai"
 import { DiCodepen } from "react-icons/di"
 import contactStyles from "./contact.module.scss"
 
@@ -115,12 +116,7 @@ const Contact = ({ contactCardRef }) => {
               >
                 <IoLogoYoutube className={contactStyles.secondaryContactIcon} />
               </a>
-              <a
-                href="https://codepen.io/draykefriesen"
-                className={contactStyles.secondaryContactIconLink}
-              >
-                <DiCodepen className={contactStyles.secondaryContactIcon} />
-              </a>
+
               <a
                 href="https://dribbble.com/draykefriesen"
                 className={contactStyles.secondaryContactIconLink}
@@ -130,10 +126,18 @@ const Contact = ({ contactCardRef }) => {
                 />
               </a>
               <a
-                href="https://www.reddit.com/user/draykefriesen"
+                href="https://www.behance.net/draykefriesen"
                 className={contactStyles.secondaryContactIconLink}
               >
-                <IoLogoReddit className={contactStyles.secondaryContactIcon} />
+                <AiOutlineBehance
+                  className={contactStyles.secondaryContactIcon}
+                />
+              </a>
+              <a
+                href="https://codepen.io/draykefriesen"
+                className={contactStyles.secondaryContactIconLink}
+              >
+                <DiCodepen className={contactStyles.secondaryContactIcon} />
               </a>
             </div>
           </div>
