@@ -40,13 +40,15 @@ const Header = ({ scroll }) => {
             </p>
           </li>
           <li className={headerStyles.navItem}>
-            <p
-              onClick={e => scroll(e.target.dataset.type)}
-              data-type="videoLink"
-              className={headerStyles.navText}
-            >
-              Videos
-            </p>
+            <a>
+              <p
+                onClick={e => scroll(e.target.dataset.type)}
+                data-type="videoLink"
+                className={headerStyles.navText}
+              >
+                Videos
+              </p>
+            </a>
           </li>
 
           <li className={headerStyles.navItem}>

@@ -7,35 +7,35 @@ import { IoIosPin } from "react-icons/io"
 import aboutStyles from "./about.module.scss"
 
 const About = ({ aboutSectionRef }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        limit: 1
-        filter: { relativeDirectory: { eq: "about-section" } }
-        sort: { fields: birthtime, order: DESC }
-      ) {
-        edges {
-          node {
-            name
-            birthTime(formatString: "YYYY MMMM DD")
-            childImageSharp {
-              fluid(maxWidth: 350) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allFile(
+  //       limit: 1
+  //       filter: { relativeDirectory: { eq: "about-section" } }
+  //       sort: { fields: birthtime, order: DESC }
+  //     ) {
+  //       edges {
+  //         node {
+  //           name
+  //           birthTime(formatString: "YYYY MMMM DD")
+  //           childImageSharp {
+  //             fluid(maxWidth: 350) {
+  //               ...GatsbyImageSharpFluid
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  const portraitImage = data.allFile.edges[0].node.childImageSharp.fluid
+  // const portraitImage = data.allFile.edges[0].node.childImageSharp.fluid
   return (
     <section className={aboutStyles.aboutWrapper}>
       <div ref={aboutSectionRef} style={{ marginBottom: "145px" }}></div>
       <div className={aboutStyles.titleImageWrapper}>
         <h2 className={aboutStyles.aboutHeader}>About</h2>
-        <Img fluid={portraitImage} className={aboutStyles.portraitImage} />
+        {/* <Img fluid={portraitImage} className={aboutStyles.portraitImage} /> */}
         <BackgroundCircles className={aboutStyles.backgroundCircles} />
         <BackgroundChevron className={aboutStyles.backgroundChevron} />
       </div>

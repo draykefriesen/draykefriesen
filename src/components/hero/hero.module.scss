@@ -14,13 +14,107 @@
     $grey-100;
 }
 
-.svg-text {
+.hero-content {
+  display: flex;
   align-self: center;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
+  @include mediaLg {
+    // width: 80%;
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  transform: translate(150px, 0);
+  width: 70%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  @include mediaMd {
+    flex-direction: column;
+    // width: 40%;
+  }
+}
+
+.image-text-wrapper {
+  display: flex;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.border-top {
+  height: 1rem;
+  width: 100%;
+  background: linear-gradient(to right, $primary-color-15, $primary-color-20);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.portrait-image {
+  width: 600px;
+  margin: auto;
+  @include mediaLg {
+    width: 400px;
+  }
+  @include mediaMd {
+    width: 300px;
+  }
+  @include mediaSm {
+    width: 200px;
+  }
+}
+
+.name-text-image {
+  margin: -80px auto 0 0;
+  width: 400px;
+  @include mediaLg {
+    width: 300px;
+    margin: -60px auto 0;
+  }
+}
+
+.text-container {
+  transform: translate(-300px, 0);
+  background: $primary-color-10;
+  opacity: 1;
+  margin: auto;
+  box-shadow: $box-shadow;
+  @include mediaLg {
+    transform: translate(-200px, 0);
+  }
+  @include mediaMd {
+    transform: translate(0, -80px);
+    z-index: 20;
+  }
+}
+
+.text-container-content {
+  padding: 0 1rem 2rem 17rem;
+  @include mediaLg {
+    padding-left: 13rem;
+  }
+  @include mediaMd {
+    padding: 1rem;
+  }
+}
+
+.bio-text {
+  font-size: 1.2rem;
+  margin: 0 0 0 3rem;
+  @include mediaLg {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.svg-text {
   overflow: visible;
   transform: translateY(20%);
-  width: 400px;
+  width: 300px;
   z-index: 100;
+  margin: 0 auto;
   @include mediaSm {
     width: 275px;
     transform: translateY(0);

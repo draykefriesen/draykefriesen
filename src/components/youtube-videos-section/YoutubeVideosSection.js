@@ -4,29 +4,29 @@ import Img from "gatsby-image"
 import videoSectionStyles from "./youtubeVideosSection.module.scss"
 
 const YoutubeVideosSection = ({ videoSectionRef }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(
-        limit: 4
-        filter: { relativeDirectory: { eq: "youtube" } }
-        sort: { fields: birthtime, order: DESC }
-      ) {
-        edges {
-          node {
-            name
-            birthTime(formatString: "YYYY MMMM DD")
-            childImageSharp {
-              fluid(maxWidth: 1280) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allFile(
+  //       limit: 4
+  //       filter: { relativeDirectory: { eq: "youtube" } }
+  //       sort: { fields: birthtime, order: DESC }
+  //     ) {
+  //       edges {
+  //         node {
+  //           name
+  //           birthTime(formatString: "YYYY MMMM DD")
+  // childImageSharp {
+  //   fluid(maxWidth: 1280) {
+  //     ...GatsbyImageSharpFluid
+  //   }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  const thumbnails = data.allFile.edges
+  // const thumbnails = data.allFile.edges
 
   return (
     <div className={videoSectionStyles.videoSectionWrapper}>
@@ -37,7 +37,7 @@ const YoutubeVideosSection = ({ videoSectionRef }) => {
         >
           Latest Videos
         </h2>
-        <ul className={videoSectionStyles.listWrapper}>
+        {/* <ul className={videoSectionStyles.listWrapper}>
           <li className={videoSectionStyles.videoContainer}>
             <h6>Graphic Design</h6>
             <h4>Abstract Background Tutorial - Affinity Design</h4>
@@ -62,7 +62,7 @@ const YoutubeVideosSection = ({ videoSectionRef }) => {
               className={videoSectionStyles.thumbnail}
             />
           </li>
-        </ul>
+        </ul> */}
         <div className={videoSectionStyles.backgroundStripes}>
           <span></span>
           <span></span>
