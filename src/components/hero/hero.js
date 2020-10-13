@@ -301,31 +301,31 @@ const HeroSection = () => {
         />
       </svg>
       <section className={styles.heroContent}>
-        <div className={styles.contentWrapper}>
-          <div className={styles.imageTextWrapper}>
+        {/* <div className={styles.contentWrapper}> */}
+          {/* <div className={styles.imageTextWrapper}> */}
             <Img
               fluid={data.allImageSharp.edges[1].node.fluid}
               objectFit="contain"
               className={styles.portraitImage}
             />
-          </div>
-
-          <div className={styles.textContainer}>
-            <div className={styles.borderTop} />
-            <div className={styles.textContainerContent}>
-              <Img
+          {/* </div> */}
+          <Img
                 fluid={data.allImageSharp.edges[0].node.fluid}
                 objectFit="contain"
                 className={styles.nameTextImage}
               />
+          <div className={styles.textContainer}>
+            <div className={styles.borderTop} />
+            <div className={styles.textContainerContent}>
+              <div className={styles.circle}/>
               <p className={styles.bioText}>
-                I’m a JavaScript developer, web designer, and illustrator. I
+               I'm a <mark><strong>JavaScript developer</strong></mark>, <br/><mark><strong>web designer</strong></mark> and <mark><strong>illustrator</strong></mark>.<br/> I
                 create custom web-apps, illustrations, logos, and a whole lot of
                 in-between. Feel free to reach out if you have any questions.
               </p>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </section>
 
       {/* <svg

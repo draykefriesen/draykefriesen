@@ -3,7 +3,7 @@
 .hero-section {
   box-sizing: border-box;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: linear-gradient(
       $primary-color-15 0%,
@@ -15,35 +15,44 @@
 }
 
 .hero-content {
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 15% 1fr;
   align-self: center;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  // margin: 0 auto;
+  margin: 0 4rem;
+  z-index: 10;
   @include mediaLg {
     // width: 80%;
   }
-}
-
-.content-wrapper {
-  display: flex;
-  transform: translate(150px, 0);
-  width: 70%;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  @include mediaMd {
-    flex-direction: column;
-    // width: 40%;
+  @include mediaSm {
+    grid-template-rows: 0 1fr 10% 1fr;
+    margin: auto 2rem auto;
   }
 }
 
-.image-text-wrapper {
-  display: flex;
-  margin: 0 auto;
-  z-index: 10;
-}
+// .content-wrapper {
+//   display: flex;
+//   // transform: translate(150px, 0);
+//   // width: 70%;
+//   align-self: center;
+//   align-items: center;
+//   justify-content: center;
+//   // margin: 0 auto;
+//   @include mediaMd {
+//     flex-direction: column;
+//     // width: 40%;
+//   }
+// }
+
+// .image-text-wrapper {
+//   display: flex;
+//   margin: 0 auto;
+//   z-index: 10;
+// }
 
 .border-top {
   height: 1rem;
@@ -53,59 +62,137 @@
   border-top-left-radius: 5px;
 }
 .portrait-image {
-  width: 600px;
-  margin: auto;
+  grid-column: 1;
+  grid-row: 1 / -1;
+  width: 650px;
+  margin: 0 -4rem 0 auto;
+  shape-margin: 0rem;
+  // float: left;
+  // shape-outside: circle(212px at 456px 327px);
+  z-index: 10;
+
   @include mediaLg {
-    width: 400px;
+    width: 550px;
   }
   @include mediaMd {
-    width: 300px;
+    grid-column: 1 / -1;
+    grid-row: 1 / 4;
+    margin: auto auto 2rem;
+    z-index: 30;
+    width: 500px;
   }
   @include mediaSm {
-    width: 200px;
+    // width: 300px;
+    width: 100%;
+    margin: auto auto 0;
   }
 }
 
 .name-text-image {
-  margin: -80px auto 0 0;
+  grid-column: 2;
+  grid-row: 2;
+  margin: -100px auto 0 -2rem;
   width: 400px;
+  z-index: 30;
   @include mediaLg {
+    width: 350px;
+    // margin: -60px auto 0;
+  }
+  @include mediaMd {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 325px;
+    margin: -1rem auto auto;
+    z-index: 40;
+  }
+  @include mediaSm {
     width: 300px;
-    margin: -60px auto 0;
+    // max-width: 300px;
+    // margin-top: -2rem;
   }
 }
 
 .text-container {
-  transform: translate(-300px, 0);
+  grid-column: 2;
+  grid-row: 2 / 4;
+  width: 700px;
   background: $primary-color-10;
   opacity: 1;
-  margin: auto;
+  margin: auto auto auto -16rem;
   box-shadow: $box-shadow;
   @include mediaLg {
-    transform: translate(-200px, 0);
+    width: 600px;
+    margin-left: -12rem;
   }
   @include mediaMd {
-    transform: translate(0, -80px);
-    z-index: 20;
+    grid-column: 1 / -1;
+    grid-row: 3 / 5;
+    width: 80%;
+    // height: 75%;
+    margin: 0 auto auto;
+    // z-index: 20;
+  }
+  @include mediaSm {
+    width: 100%;
   }
 }
 
 .text-container-content {
-  padding: 0 1rem 2rem 17rem;
+  padding: 0 1.5rem 1rem 17rem;
   @include mediaLg {
     padding-left: 13rem;
   }
   @include mediaMd {
-    padding: 1rem;
+    margin-top: auto;
+    padding: 1rem 2rem 2rem;
+  }
+}
+
+.circle {
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin-left: -8rem;
+  shape-outside: circle(163px at -104px 24px);
+  @include mediaMd {
+    display: none;
   }
 }
 
 .bio-text {
+  // width: 80%;
   font-size: 1.2rem;
-  margin: 0 0 0 3rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 6rem 0 0 0;
+
   @include mediaLg {
-    margin: 0 auto;
-    text-align: center;
+    // margin: 0;
+    // text-align: center;`
+    margin-top: 5rem;
+  }
+  @include mediaMd {
+    margin-top: 2.5rem;
+  }
+  @include mediaSm {
+  }
+}
+
+mark {
+  background: hsla(218, 100%, 60%, 0.4);
+  background: linear-gradient(
+    -134deg,
+    hsla(218, 100%, 60%, 0.4),
+    hsla(258, 100%, 55%, 0.4)
+  );
+  border-radius: 2px;
+  padding: 0 0.2rem;
+  white-space: nowrap;
+}
+
+br {
+  @include mediaMd {
+    display: none;
   }
 }
 
