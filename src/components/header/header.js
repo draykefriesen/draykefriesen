@@ -2,21 +2,23 @@ import React, { useEffect } from "react"
 import { useSpring, animated as a } from "react-spring"
 import headerStyles from "./header.module.scss"
 
-const Header = ({ scroll }) => {
-  useEffect(() => {
-    const script = document.createElement("script")
-    script.src = "https://apis.google.com/js/platform.js"
-    script.async = true
-    document.body.appendChild(script)
 
-    return () => {
-      document.body.removeChild(script)
-    }
-  }, [])
+const Header = ({ scroll }) => {
+
+
+  // useEffect(() => {
+  //   const script = document.createElement("script")
+  //   script.src = "https://apis.google.com/js/platform.js"
+  //   script.async = true
+  //   document.body.appendChild(script)
+
+  //   return () => {
+  //     document.body.removeChild(script)
+  //   }
+  // }, [])
 
   const animate = useSpring({
     opacity: 1,
-
     from: {
       opacity: 0,
     },
@@ -26,41 +28,40 @@ const Header = ({ scroll }) => {
 
   //const src = "https://apis.google.com/js/platform.js"
 
+
   return (
     <a.header style={animate} className={headerStyles.pageHeader}>
       <nav className={headerStyles.headerNav}>
         <ul className={headerStyles.navListWrapper}>
           <li className={headerStyles.navItem}>
-            <p
+            <button
               onClick={e => scroll(e.target.dataset.type)}
               data-type="aboutLink"
-              className={headerStyles.navText}
+              className={headerStyles.navButton}
             >
-              About
-            </p>
+              Projects
+            </button>
           </li>
           <li className={headerStyles.navItem}>
-            <a>
-              <p
+              <button
                 onClick={e => scroll(e.target.dataset.type)}
-                data-type="videoLink"
-                className={headerStyles.navText}
+                data-type="skillsLink"
+                className={headerStyles.navButton}
               >
-                Videos
-              </p>
-            </a>
+                Skills
+              </button>
           </li>
 
           <li className={headerStyles.navItem}>
-            <p
+            <button
               onClick={e => scroll(e.target.dataset.type)}
               data-type="contactLink"
-              className={headerStyles.navText}
+              className={headerStyles.navButton}
             >
               Contact
-            </p>
+            </button>
           </li>
-          <li className={headerStyles.navItem}>
+          {/* <li className={headerStyles.navItem}>
             <div
               className={`${headerStyles.youtubeBtn} g-ytsubscribe`}
               data-channelid="UCADSoOuc1_VD4qxgIJVZtZA"
@@ -68,7 +69,7 @@ const Header = ({ scroll }) => {
               data-theme="dark"
               data-count="default"
             ></div>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <div></div>

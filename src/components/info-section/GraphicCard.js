@@ -51,13 +51,13 @@ const GraphicCard = ({ type }) => {
                 <IoIosCheckmarkCircleOutline
                   className={graphicCardStyles.icon}
                 />
-                <p>SVG Illustration & Animiation</p>
+                <p>SVG Illustration &amp; Animiation</p>
               </li>
               <li className={graphicCardStyles.listItem}>
                 <IoIosCheckmarkCircleOutline
                   className={graphicCardStyles.icon}
                 />
-                <p>Brand Identity</p>
+                <p>Small Business Solutions</p>
               </li>
             </>
           )}

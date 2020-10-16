@@ -1,21 +1,32 @@
 @import "../../styles/config.module.scss";
 
 .info-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
   position: relative;
-  background: linear-gradient(
-    $primary-color-15 0%,
-    transparent 25%,
-    transparent 65%,
-    $primary-color-15
-  );
-  padding: 10rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  padding-top: 15rem;
+  position: relative;
+  @include mediaLg {
+    grid-template-columns: 15% 1fr auto 1fr 15%;
+  }
+  @include mediaMd {
+    grid-template-columns: 10% 1fr auto 1fr 10%;
+  }
+}
+
+.graphic-card-wrapper {
+  grid-column: 2 / 5;
+  display: flex;
+  width: 100%;
+  margin: 15rem auto 0;
+  @include mediaMd {
+    flex-direction: column;
+    margin-top: 10rem;
+  }
 }
 
 .background-stripes {
-  @include borderStripes;
   top: 0;
   left: 0;
   span {

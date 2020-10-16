@@ -1,10 +1,12 @@
 @import "../../styles/config.module.scss";
 
 .main-text-wrapper {
-  grid-column: 1 / 4;
+  grid-column: 2 / 5;
   grid-row: 1;
-  @include mediaMd {
-    grid-column: 1 / -1;
+  margin: 0;
+  @include mediaLg {
+    // grid-column: 1 / -1;
+    // margin: 0 auto;
   }
 }
 
@@ -14,15 +16,9 @@
   line-height: 1;
   letter-spacing: -0.05rem;
   color: $grey-900;
-  margin: 6rem 2rem 1rem 2rem;
+  margin: 0 0 1rem 0;
   @include mediaLg {
     font-size: $section-header-Lg;
-  }
-  @include mediaMd {
-    margin-top: 15rem;
-  }
-  @include mediaSm {
-    margin-top: 20rem;
   }
 }
 
@@ -31,7 +27,7 @@
   font-size: $tertiary-header-Lg;
   font-weight: $medium;
   line-height: 1.4;
-  margin: 0 1rem 0 2rem;
+  margin: 0 1rem 0 0;
   @include mediaLg {
     font-size: $tertiary-header-Lg;
   }
@@ -39,7 +35,7 @@
 
 .list {
   list-style: none;
-  padding-left: 2rem;
+  padding-left: 1rem;
   margin-top: 2rem;
 }
 
@@ -64,16 +60,16 @@
 
 .contact-button-wrapper {
   grid-column: 1 / -1;
-  grid-row: 2;
+  grid-row: 3;
   justify-self: center;
   text-align: center;
   margin: 12rem 0;
-  @include mediaMd {
-    margin: 20rem 0;
-  }
-  @include mediaSm {
-    margin: 22rem 0;
-  }
+  // @include mediaMd {
+  //   margin: 20rem 0;
+  // }
+  // @include mediaSm {
+  //   margin: 22rem 0;
+  // }
 }
 
 .button-paragraph {
@@ -98,11 +94,9 @@
   font-weight: $bold;
   letter-spacing: 0.8px;
   padding: 1rem 2rem;
+  cursor: pointer;
+
   &:focus {
     outline: none;
-  }
-
-  &:hover {
-    cursor: pointer;
   }
 }

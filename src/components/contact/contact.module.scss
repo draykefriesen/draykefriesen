@@ -1,23 +1,30 @@
 @import "../../styles/config.module.scss";
 
-.contact-wrapper {
+.content-wrapper {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(
-    $primary-color-15,
-    transparent 35%,
-    transparent 75%,
-    $primary-color-15
-  );
-  padding: 22rem 0 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto 1fr 1fr;
+  @include mediaLg {
+    grid-template-columns: 15% 1fr auto 1fr 15%;
+  }
+  @include mediaMd {
+    grid-template-columns: 10% 1fr auto 1fr 10%;
+  }
 }
 
-.contact-header {
-  grid-column: 1 / -1;
+.contact-content {
+  position: relative;
+  grid-column: 2 / 5;
+  display: flex;
+  flex-direction: column;
+  padding: 15rem 0 4rem;
+  margin-bottom: 10rem;
+}
+
+.section-title {
   font-size: $section-header;
   font-weight: $bold;
-  margin: 0 0 0 2rem;
+  margin: 0 0 2rem;
   color: $grey-900;
   @include mediaLg {
     font-size: $section-header-Lg;
@@ -28,7 +35,6 @@
   display: flex;
   align-content: center;
   justify-content: center;
-  margin: 2rem;
 }
 
 .contact-info-card-wrapper {
@@ -219,28 +225,4 @@
 .secondary-contact-icon {
   color: $grey-500;
   font-size: 1.2rem;
-}
-
-.background-stripes {
-  @include borderStripes;
-  top: 0;
-  left: 0;
-  span {
-    display: inline-block;
-    position: absolute;
-    border-radius: 3px;
-    &:first-child {
-      height: 14%;
-      width: 100%;
-      background: $grey-300;
-      top: 15%;
-    }
-    &:nth-child(2) {
-      height: 8%;
-      width: 50%;
-      background: $grey-400;
-      top: 25%;
-      left: 55%;
-    }
-  }
 }

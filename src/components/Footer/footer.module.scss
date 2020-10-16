@@ -1,0 +1,9 @@
+@import "../../styles/config.module.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background: $primary-color-15;
+  padding: 2rem 0 4rem;
+  color: $grey-800;
+}

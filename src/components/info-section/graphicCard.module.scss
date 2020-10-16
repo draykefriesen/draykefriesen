@@ -10,7 +10,6 @@
   @include mediaMd {
     grid-column: 1 / -1;
     width: 100%;
-    //transform: translateX(10%);
   }
 }
 
@@ -24,30 +23,22 @@
 }
 
 .card-one {
-  grid-row: 1;
-  margin: 6rem 2rem 0 0;
+  margin: 0 auto 0 0;
   .svg-illustration {
     margin-top: -120px;
-    transform: translateX(5%);
+    transform: translateX(3%);
   }
   @include mediaMd {
-    grid-column: 1 / -1;
-    grid-row: 3;
-    margin: 5rem 0;
   }
 }
 
 .card-two {
-  grid-row: 3 / 5;
-  margin: 0 2rem 0 0;
+  margin: 0 0 0 auto;
   .svg-illustration {
-    transform: translateX(-5.5%);
     margin-top: -120px;
   }
   @include mediaMd {
-    grid-column: 1 / -1;
-    grid-row: 4;
-    margin: 0 0 5rem;
+    margin-top: 5rem;
   }
 }
 
@@ -83,6 +74,7 @@
 
 .svg-illustration {
   width: 300px;
+  height: 100%;
   display: block;
   margin: 0 auto;
   @include mediaMd {

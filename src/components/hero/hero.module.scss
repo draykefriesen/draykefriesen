@@ -1,17 +1,11 @@
 @import "../../styles/config.module.scss";
 
 .hero-section {
+  position: relative;
   box-sizing: border-box;
   display: flex;
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(
-      $primary-color-15 0%,
-      transparent 10%,
-      transparent 75%,
-      $primary-color-15
-    )
-    $grey-100;
 }
 
 .hero-content {
@@ -22,37 +16,18 @@
   align-self: center;
   align-items: center;
   justify-content: center;
-  // margin: 0 auto;
   margin: 0 4rem;
   z-index: 10;
   @include mediaLg {
-    // width: 80%;
+  }
+  @include mediaMd {
+    margin-top: 8rem;
   }
   @include mediaSm {
     grid-template-rows: 0 1fr 10% 1fr;
-    margin: auto 2rem auto;
+    margin: 6rem 2rem auto;
   }
 }
-
-// .content-wrapper {
-//   display: flex;
-//   // transform: translate(150px, 0);
-//   // width: 70%;
-//   align-self: center;
-//   align-items: center;
-//   justify-content: center;
-//   // margin: 0 auto;
-//   @include mediaMd {
-//     flex-direction: column;
-//     // width: 40%;
-//   }
-// }
-
-// .image-text-wrapper {
-//   display: flex;
-//   margin: 0 auto;
-//   z-index: 10;
-// }
 
 .border-top {
   height: 1rem;
@@ -67,8 +42,6 @@
   width: 650px;
   margin: 0 -4rem 0 auto;
   shape-margin: 0rem;
-  // float: left;
-  // shape-outside: circle(212px at 456px 327px);
   z-index: 10;
 
   @include mediaLg {
@@ -82,7 +55,6 @@
     width: 500px;
   }
   @include mediaSm {
-    // width: 300px;
     width: 100%;
     margin: auto auto 0;
   }
@@ -91,24 +63,22 @@
 .name-text-image {
   grid-column: 2;
   grid-row: 2;
-  margin: -100px auto 0 -2rem;
-  width: 400px;
+  margin-left: auto;
+  width: 480px;
   z-index: 30;
   @include mediaLg {
-    width: 350px;
-    // margin: -60px auto 0;
+    width: 450px;
   }
   @include mediaMd {
+    max-width: 100%;
     grid-column: 1 / -1;
-    grid-row: 3;
-    width: 325px;
-    margin: -1rem auto auto;
+    grid-row: 3 / 4;
+    margin: 0 auto auto;
     z-index: 40;
   }
   @include mediaSm {
-    width: 300px;
-    // max-width: 300px;
-    // margin-top: -2rem;
+    width: 100%;
+    min-width: 330px;
   }
 }
 
@@ -128,9 +98,7 @@
     grid-column: 1 / -1;
     grid-row: 3 / 5;
     width: 80%;
-    // height: 75%;
     margin: 0 auto auto;
-    // z-index: 20;
   }
   @include mediaSm {
     width: 100%;
@@ -144,7 +112,7 @@
   }
   @include mediaMd {
     margin-top: auto;
-    padding: 1rem 2rem 2rem;
+    padding: 0.5rem 2rem 2rem;
   }
 }
 
@@ -160,19 +128,17 @@
 }
 
 .bio-text {
-  // width: 80%;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.4;
-  margin: 6rem 0 0 0;
+  margin: 1rem 0 0 0;
+  color: $grey-900;
 
-  @include mediaLg {
-    // margin: 0;
-    // text-align: center;`
-    margin-top: 5rem;
-  }
+  // @include mediaLg {
+  //   margin-top: 5rem;
+  // }
   @include mediaMd {
-    margin-top: 2.5rem;
+    margin-top: 0;
   }
   @include mediaSm {
   }
@@ -196,21 +162,22 @@ br {
   }
 }
 
-.svg-text {
-  overflow: visible;
-  transform: translateY(20%);
-  width: 300px;
-  z-index: 100;
-  margin: 0 auto;
-  @include mediaSm {
-    width: 275px;
-    transform: translateY(0);
-  }
-}
+// .svg-text {
+//   overflow: visible;
+//   transform: translateY(20%);
+//   width: 300px;
+//   z-index: 100;
+//   margin: 0 auto;
+//   @include mediaSm {
+//     width: 275px;
+//     transform: translateY(0);
+//   }
+// }
 
 .svg-shapes {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  max-height: 100%;
   position: absolute;
   top: 0;
   left: 0;

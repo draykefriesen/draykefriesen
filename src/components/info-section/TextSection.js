@@ -15,7 +15,7 @@ const TextHeader = ({ scroll }) => {
       <div className={textAreaStyles.mainTextWrapper}>
         <h2 className={textAreaStyles.textSectionTitle}>What I do</h2>
         <p className={textAreaStyles.description}>
-          I <b>design</b>, <b>code</b>, and <b>illustrate</b> for the web.{" "}
+          I <mark><b>design</b></mark>, <mark><b>code</b></mark>, and <mark><b>illustrate</b></mark> for the web.
           <br /> My goal is to always create fast, usable, and visually
           appealing interfaces that work accross all devices.
         </p>

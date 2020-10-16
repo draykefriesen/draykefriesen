@@ -50,18 +50,13 @@ $box-shadow-mini: 0 1px 2px #00000044;
   display: inline-flex;
 }
 
-@mixin borderStripes {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-origin: 0;
-  transform: skew(-12deg) rotate(-12deg);
-  z-index: -200;
-}
-
 // Transition Eases
 @mixin easeOut {
   transition: all 0.3s ease;
+}
+
+@mixin easeOutMid {
+  transition: all 0.2s ease;
 }
 
 @mixin easeOutFast {

@@ -2,12 +2,12 @@
 
 .tech-list-wrapper {
   position: relative;
-  grid-column: 1 / -1;
-  grid-row: 4;
+  grid-column: 2 / 5;
+  grid-row: 2;
   width: 100%;
+  margin-bottom: 10rem;
   @include mediaMd {
     display: flex;
-    grid-row: 5;
   }
 }
 
@@ -16,8 +16,8 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(5, auto);
-  width: 35%;
-  margin: 0 0 0 2rem;
+  width: 100%;
+  margin: 0;
   padding: 0;
   background: $primary-color-10;
   box-shadow: $box-shadow;
@@ -25,12 +25,7 @@
   border-radius: 5px;
   z-index: 100;
   overflow: hidden;
-  @include mediaLg {
-    width: 45%;
-  }
-
   @include mediaMd {
-    width: 80%;
     margin: 0 auto;
   }
 }
@@ -51,20 +46,26 @@
   &:nth-of-type(1) {
     grid-column: 1;
     grid-row: 2;
-    margin: 2rem 2rem 1rem;
+    margin: 2rem 1.75rem 1.5rem;
+    @include mediaLg {
+      margin-bottom: 1rem;
+    }
   }
   &:nth-of-type(2) {
     grid-column: 1;
     grid-row: 4;
-    margin: 0 2rem 1rem;
+    margin: 0 1.75rem 1.5rem;
+    @include mediaLg {
+      margin-bottom: 1rem;
+    }
   }
 }
 
 .tech-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  grid-row-gap: 1rem;
+  row-gap: 1.5rem;
   margin: 0 2rem 2rem 1.75rem;
   padding: 0;
   &:nth-of-type(1) {
@@ -74,6 +75,9 @@
   &:nth-of-type(2) {
     grid-column: 1;
     grid-row: 5;
+  }
+  @include mediaSm {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -100,13 +104,26 @@
     }
   }
   &:nth-child(4) {
-    grid-column: 1;
-    grid-row: 2;
+    grid-column: 4;
+    grid-row: 1;
+    @include mediaMd {
+      margin-left: 1rem;
+    }
+    @include mediaSm {
+      grid-column: 1;
+      grid-row: 2;
+      margin-left: 0;
+    }
   }
   &:nth-child(5) {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
     @include mediaMd {
+      // margin-left: 1rem;
+    }
+    @include mediaSm {
+      grid-column: 2;
+      grid-row: 2;
       margin-left: 1rem;
     }
   }
@@ -114,8 +131,16 @@
   p {
     display: inline-block;
     color: $grey-700;
+    font-size: 1.1rem;
     font-weight: $medium;
     margin: 0.2rem 0 0 0.3rem;
+    white-space: nowrap;
+    @include mediaMd {
+      font-size: 1rem;
+    }
+    @include mediaSm {
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -125,7 +150,16 @@
 
 .tech-icon {
   color: $grey-600;
-  font-size: 20px;
+  width: 24px;
+  height: 24px;
+  @include mediaMd {
+    width: 20px;
+    height: 20px;
+  }
+  @include mediaSm {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .background-chevron {
