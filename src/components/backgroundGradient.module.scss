@@ -3,7 +3,10 @@
 .top-gradient {
   position: absolute;
   width: 100%;
-  background: linear-gradient($primary-color-15 0%, transparent 40%);
+  background: linear-gradient(
+    hsla(238, 100%, 93%, 1) 0%,
+    hsla(238, 100%, 93%, 0) 40%
+  );
   z-index: -10;
 }
 .top-gradient[data-section="hero"] {
@@ -31,7 +34,10 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(transparent 0, $primary-color-15 80%);
+  background: linear-gradient(
+    hsla(238, 100%, 93%, 0) 0,
+    hsla(238, 100%, 93%, 1) 80%
+  );
   z-index: -10;
 }
 
