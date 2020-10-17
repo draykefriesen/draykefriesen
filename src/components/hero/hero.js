@@ -8,7 +8,7 @@ import styles from "./hero.module.scss"
 const HeroSection = () => {
   const {allFile} = useStaticQuery(graphql`
     query {
-      allFile(filter: {relativeDirectory: {eq: "hero-images"}}) {
+      allFile(filter: {relativeDirectory: {eq: "hero-images"}}, sort: {order: ASC, fields: name}) {
         edges {
           node {
             childImageSharp {
@@ -249,7 +249,7 @@ const HeroSection = () => {
       <div className={styles.heroContent}>
     
             <Img
-              fluid={allFile.edges[1].node.childImageSharp.fluid}
+              fluid={allFile.edges[0].node.childImageSharp.fluid}
               objectFit="contain"
               className={styles.portraitImage}
             />
@@ -262,7 +262,7 @@ const HeroSection = () => {
           <div className={styles.textContainer}>
             <div className={styles.borderTop} />
             <Img
-                fluid={allFile.edges[2].node.childImageSharp.fluid}
+                fluid={allFile.edges[1].node.childImageSharp.fluid}
                 objectFit="contain"
                 className={styles.nameTextImage}
               />

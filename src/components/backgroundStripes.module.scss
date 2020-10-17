@@ -12,6 +12,28 @@
     height: 250px;
   }
 
+  .background-chevron {
+    position: absolute;
+    width: 160px;
+    transform: skew(-12deg) rotate(-12deg);
+    z-index: 1;
+    top: -85%;
+    right: 11%;
+    opacity: 0.6;
+
+    @include mediaLg {
+      top: -50%;
+    }
+    @include mediaMd {
+      top: -15%;
+      right: 6%;
+    }
+    @include mediaSm {
+      width: 120px;
+      top: 20%;
+    }
+  }
+
   span {
     position: absolute;
     border-radius: 3px;
@@ -62,6 +84,25 @@
 
   @include mediaMd {
     margin-top: 2rem;
+  }
+
+  .background-chevron {
+    position: absolute;
+    width: 100px;
+    top: -85%;
+    right: 11%;
+    opacity: 0.8;
+    transform: skew(-12deg);
+    z-index: 1;
+    @include mediaLg {
+      top: -25%;
+    }
+    @include mediaMd {
+      top: -10%;
+    }
+    @include mediaSm {
+      top: 25%;
+    }
   }
 
   span {

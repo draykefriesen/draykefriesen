@@ -36,8 +36,8 @@ const Projects = ({ projectsSectionRef }) => {
     <section className={styles.projectsWrapper}>
       <BackgroundGradientTop section='projects'/>
         <h2 className={styles.sectionTitle} ref={projectsSectionRef}>Projects</h2>
-        <BackgroundCircles className={styles.backgroundCircles} />
-        <BackgroundChevron className={styles.backgroundChevron} />
+        {/* <BackgroundCircles className={styles.backgroundCircles} />
+        <BackgroundChevron className={styles.backgroundChevron} /> */}
       <div className={styles.projectsSlider}>
         <div className={styles.card}>
           <a href='https://www.expressvg.com/' target='_blank' rel="noreferrer" className={styles.projectLink}>

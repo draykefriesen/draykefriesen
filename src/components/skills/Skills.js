@@ -4,7 +4,7 @@ import {BackgroundGradientTop, BackgroundGradientBottom} from '../BackgroundGrad
 import {BackgroundStripes2} from '../BackgroundStripes'
 import styles from "./skills.module.scss"
 
-const YoutubeVideosSection = ({ skillsSectionRef }) => {
+const Skills = ({ skillsSectionRef }) => {
 
   return (
     <section className={styles.videoSectionWrapper}>
@@ -57,4 +57,4 @@ const YoutubeVideosSection = ({ skillsSectionRef }) => {
   )
 }
 
-export default YoutubeVideosSection
+export default Skills

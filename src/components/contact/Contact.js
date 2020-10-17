@@ -7,7 +7,7 @@ import {
   IoLogoTwitter,
   IoLogoDribbble,
   IoLogoYoutube,
-  IoLogoReddit,
+  IoLogoLinkedin
 } from "react-icons/io"
 import { AiOutlineBehance } from "react-icons/ai"
 import { DiCodepen } from "react-icons/di"
@@ -112,11 +112,9 @@ const Contact = ({ contactCardRef }) => {
               some other places you can find me
             </h6>
             <div className={styles.secondaryLogoBlock}>
-              <a
-                href="https://www.youtube.com/channel/UCADSoOuc1_VD4qxgIJVZtZA"
-                className={styles.secondaryContactIconLink}
-              >
-                <IoLogoYoutube className={styles.secondaryContactIcon} />
+         
+              <a href="https://www.linkedin.com/in/drayke-friesen-0684b41a3/">
+              <IoLogoLinkedin className={styles.secondaryContactIcon}  />
               </a>
 
               <a
@@ -128,19 +126,25 @@ const Contact = ({ contactCardRef }) => {
                 />
               </a>
               <a
+                href="https://www.youtube.com/channel/UCADSoOuc1_VD4qxgIJVZtZA"
+                className={styles.secondaryContactIconLink}
+              >
+                <IoLogoYoutube className={styles.secondaryContactIcon} />
+              </a>
+              {/* <a
                 href="https://www.behance.net/draykefriesen"
                 className={styles.secondaryContactIconLink}
               >
                 <AiOutlineBehance
                   className={styles.secondaryContactIcon}
                 />
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="https://codepen.io/draykefriesen"
                 className={styles.secondaryContactIconLink}
               >
                 <DiCodepen className={styles.secondaryContactIcon} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
