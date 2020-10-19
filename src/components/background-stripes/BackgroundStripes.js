@@ -1,5 +1,5 @@
 import React from 'react'
-import BackgroundChevron from "../media/svg/background-chevron.svg"
+import BackgroundChevron from "../../media/svg/background-chevron.svg"
 import styles from './backgroundStripes.module.scss'
 
 export const BackgroundStripes5 = () => {

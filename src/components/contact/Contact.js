@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect} from "react"
 import { useSpring, animated as a } from "react-spring"
 import {
   IoIosMail,
@@ -9,29 +9,30 @@ import {
   IoLogoYoutube,
   IoLogoLinkedin
 } from "react-icons/io"
-import { AiOutlineBehance } from "react-icons/ai"
-import { DiCodepen } from "react-icons/di"
-import {BackgroundGradientTop, BackgroundGradientBottom} from '../BackgroundGradient'
+import {BackgroundGradientTop, BackgroundGradientBottom} from '../background-gradient/BackgroundGradient'
 import styles from "./contact.module.scss"
 
 const Contact = ({ contactCardRef }) => {
-  // const ref = useRef()
 
-  const handleScroll = () => {
-    const posY = contactCardRef.current.getBoundingClientRect().top
-    const offset = posY / window.innerHeight <= 0.65 ? 0 : 100
-    set({ offset })
-  }
+
+  const [{ offset }, set] = useSpring(() => ({ offset: 0 }))
+  const calcOffset = o => `translateX(${o}%)`
 
   useEffect(() => {
+
+    const handleScroll = () => {
+      const posY = contactCardRef.current.getBoundingClientRect().top
+      const offset = posY / window.innerHeight <= 0.65 ? 0 : 100
+      set({ offset })
+    }
+
     window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  },[handleScroll])
+  },[set, contactCardRef])
 
-  const [{ offset }, set] = useSpring(() => ({ offset: 0 }))
-  const calcOffset = o => `translateX(${o}%)`
+
 
   return (
     <section className={styles.contentWrapper}>

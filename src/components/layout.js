@@ -1,9 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header/header"
 import Footer from './Footer/Footer'
-import "../styles/index.scss"
+import "../styles/global.scss"
 
 const Layout = ({ children, scroll }) => {
   const data = useStaticQuery(graphql`
@@ -25,8 +24,5 @@ const Layout = ({ children, scroll }) => {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

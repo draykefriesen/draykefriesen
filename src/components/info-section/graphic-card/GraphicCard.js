@@ -1,6 +1,6 @@
 import React from "react"
-import WebDevIcon from "../../media/svg/web-dev-card.svg"
-import WebDesignIcon from "../../media/svg/web-design-card.svg"
+import WebDevIcon from "../../../media/svg/web-dev-card.svg"
+import WebDesignIcon from "../../../media/svg/web-design-card.svg"
 import graphicCardStyles from "./graphicCard.module.scss"
 import { IoIosCheckmarkCircleOutline } from "react-icons/io"
 

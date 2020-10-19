@@ -10,7 +10,6 @@ import {
   DiVisualstudio
 } from "react-icons/di"
 import { SiAdobexd } from "react-icons/si"
-// import BackgroundChevron from "../../media/svg/background-chevron.svg"
 import styles from "./techListSection.module.scss"
 
 const TechListSection = () => {

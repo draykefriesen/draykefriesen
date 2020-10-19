@@ -9,10 +9,8 @@ import {
 import {FiExternalLink} from 'react-icons/fi'
 import {IoIosLink} from 'react-icons/io'
 import ExpressvgIcon from '../../media/svg/expressvg-e-logo-pink.svg'
-import BackgroundCircles from "../../media/svg/background-circles.svg"
-import BackgroundChevron from "../../media/svg/background-chevron.svg"
-import {BackgroundGradientTop, BackgroundGradientBottom} from '../BackgroundGradient'
-import {BackgroundStripes5} from '../BackgroundStripes'
+import {BackgroundGradientTop, BackgroundGradientBottom} from '../background-gradient/BackgroundGradient'
+import {BackgroundStripes5} from '../background-stripes/BackgroundStripes'
 import styles from "./projects.module.scss"
 
 const Projects = ({ projectsSectionRef }) => {

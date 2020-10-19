@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useSpring, animated as a, config } from "react-spring"
-import {BackgroundGradientTop, BackgroundGradientBottom} from '../BackgroundGradient'
+import {BackgroundGradientTop, BackgroundGradientBottom} from '../background-gradient/BackgroundGradient'
 import styles from "./hero.module.scss"
 
 const HeroSection = () => {
@@ -253,12 +253,6 @@ const HeroSection = () => {
               objectFit="contain"
               className={styles.portraitImage}
             />
-        
-          {/* <Img
-                fluid={allFile.edges[2].node.childImageSharp.fluid}
-                objectFit="contain"
-                className={styles.nameTextImage}
-              /> */}
           <div className={styles.textContainer}>
             <div className={styles.borderTop} />
             <Img
