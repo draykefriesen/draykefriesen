@@ -5,10 +5,13 @@ html {
 }
 
 body {
-  font-family: forma-djr-display, sans-serif;
   margin: 0;
   background: $grey-100;
   overflow-x: hidden;
+}
+body,
+button {
+  font-family: forma-djr-display, sans-serif;
 }
 
 .footer {

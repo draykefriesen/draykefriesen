@@ -118,9 +118,7 @@
   &:nth-child(5) {
     grid-column: 1;
     grid-row: 2;
-    @include mediaMd {
-      // margin-left: 1rem;
-    }
+
     @include mediaSm {
       grid-column: 2;
       grid-row: 2;
@@ -159,23 +157,5 @@
   @include mediaSm {
     width: 18px;
     height: 18px;
-  }
-}
-
-.background-chevron {
-  position: absolute;
-  width: 15%;
-  top: 15%;
-  left: 35%;
-  transform: rotate(-12deg);
-  opacity: 0.8;
-  z-index: 1;
-  @include mediaLg {
-    left: 45%;
-  }
-  @include mediaMd {
-    width: 20%;
-    top: 105%;
-    left: 75%;
   }
 }
