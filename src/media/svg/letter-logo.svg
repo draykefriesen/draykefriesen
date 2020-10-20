@@ -1,5 +1,6 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <text transform="matrix(.92 0 0 1 0 396)" font-size="465.89" fill="#a8abff" font-family="FormaDJRText-Bold,Forma DJR Text" font-weight="700" letter-spacing="-.02em">
-    D<tspan x="314" y="0" letter-spacing="-.03em">F</tspan>
-  </text>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 61.24">
+  <g>
+    <path d="M.79,61.24A.78.78,0,0,1,0,60.46L.44,30.62,0,.79A.79.79,0,0,1,.79,0H22.4C40,0,54.86,9.45,54.86,31.06s-15,30.18-32.29,30.18Zm12.77-9.88h9.71c9.89,0,17.85-5.87,17.85-20.39S33.25,9.89,22.92,9.89H13.56c0,.08-.35,10.32-.35,20.47C13.21,40.77,13.56,51.27,13.56,51.36Z" style="fill: #a8abff"/>
+    <path d="M59.23,61.24a.78.78,0,0,1-.79-.78l.44-29.84L58.44.79A.79.79,0,0,1,59.23,0h40a.79.79,0,0,1,.79.79V9.1a.79.79,0,0,1-.79.79H72l-.35,16.79H98a.79.79,0,0,1,.79.79v8.31a.79.79,0,0,1-.79.79H71.65L72,60.46a.78.78,0,0,1-.78.78Z" style="fill: #a8abff"/>
+  </g>
 </svg>
