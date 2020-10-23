@@ -41,7 +41,15 @@
     margin-top: 5rem;
   }
 }
-
+.card-three {
+  margin: 0 0 0 auto;
+  .svg-illustration {
+    margin-top: -120px;
+  }
+  @include mediaMd {
+    margin-top: 5rem;
+  }
+}
 .border-top {
   height: 0.8rem;
   grid-column: 1 / -1;
