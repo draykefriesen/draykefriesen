@@ -3,8 +3,9 @@
 .card-wrapper {
   display: flex;
   flex-direction: column;
-  grid-column: 4 / 6;
-  justify-self: end;
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin: 0 auto;
   z-index: 10;
 
   @include mediaMd {
@@ -16,14 +17,22 @@
 .card {
   background: linear-gradient(to bottom, $primary-color-1 80%, $grey-200 20%);
   border-radius: 5px;
-  width: 275px;
+  width: 325px;
   padding-bottom: 8rem;
   box-shadow: $box-shadow;
   margin: 0 auto;
+  @include mediaLg {
+    width: 300px;
+  }
+  @include mediaMd {
+    width: 325px;
+  }
+  @include mediaSm {
+    width: 300px;
+  }
 }
 
 .card-one {
-  margin: 0 auto 0 0;
   .svg-illustration {
     margin-top: -120px;
     transform: translateX(3%);
@@ -33,7 +42,6 @@
 }
 
 .card-two {
-  margin: 0 0 0 auto;
   .svg-illustration {
     margin-top: -120px;
   }
@@ -42,7 +50,6 @@
   }
 }
 .card-three {
-  margin: 0 0 0 auto;
   .svg-illustration {
     margin-top: -120px;
   }
@@ -58,14 +65,35 @@
   border-top-left-radius: 5px;
 }
 
+.card-header {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+  color: $primary-color;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 1rem;
+  line-height: 1.3;
+  margin-top: 0;
+  height: 90px;
+  // @include mediaMd {
+  //   height: 100px;
+  // }
+}
+
 .text-list {
   list-style: none;
   padding: 0;
+  height: 115px;
 }
 
 .list-item {
   display: flex;
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 3rem;
   p {
     color: $grey-700;
     padding-left: 0.6rem;
@@ -81,11 +109,18 @@
 }
 
 .svg-illustration {
-  width: 300px;
+  width: 350px;
   height: 100%;
   display: block;
   margin: 0 auto;
+  @include mediaLg {
+    width: 325px;
+  }
   @include mediaMd {
+    width: 350px;
     margin-bottom: 6rem;
+  }
+  @include mediaSm {
+    width: 325px;
   }
 }

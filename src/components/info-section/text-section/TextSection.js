@@ -1,7 +1,7 @@
 import React from "react"
 import { useSpring, animated as a, config } from "react-spring"
 import { IoIosCheckmarkCircleOutline } from "react-icons/io"
-import textAreaStyles from "./textSection.module.scss"
+import styles from "./textSection.module.scss"
 
 const TextHeader = ({ scroll }) => {
   const [{ y, boxShadow }, set] = useSpring(() => ({
@@ -12,44 +12,63 @@ const TextHeader = ({ scroll }) => {
 
   return (
     <>
-      <div className={textAreaStyles.mainTextWrapper}>
-        <h2 className={textAreaStyles.textSectionTitle}>What I do</h2>
-        <p className={textAreaStyles.description}>
-          I <mark><b>design</b></mark>, <mark><b>code</b></mark>, and <mark><b>illustrate</b></mark> for the web.
-          <br /> My goal is to always create fast, usable, and visually
-          appealing interfaces that work accross all devices.
-        </p>
-        <ul className={textAreaStyles.list}>
-          <li className={textAreaStyles.listItem}>
-            <IoIosCheckmarkCircleOutline className={textAreaStyles.listIcon} />
-            <p className={textAreaStyles.listItemText}>
+      <div className={styles.mainTextSection}>
+        <div className={styles.mainTextWrapper}>
+          <h2 className={styles.textSectionTitle}>
+            What <span>I Do</span>
+          </h2>
+          <p className={styles.description}>
+            I
+            <mark>
+              <b>design</b>
+            </mark>
+            {/* , */}
+            <mark>
+              <b>code</b>
+            </mark>
+            {/* , */}
+            and
+            <mark>
+              <b>illustrate</b>
+            </mark>
+            for the web.
+            <br />
+          </p>
+          <p className={styles.descriptionSubText}>
+            I work with small businesses to build the best performing and best
+            looking projects. This helps to bring more customers to their sites,
+            and more revenue to their business.
+          </p>
+        </div>
+        {/* <ul className={styles.list}>
+          <li className={styles.listItem}>
+            <IoIosCheckmarkCircleOutline className={styles.listIcon} />
+            <p className={styles.listItemText}>
               custom designs and mockups.
             </p>
           </li>
-          <li className={textAreaStyles.listItem}>
-            <IoIosCheckmarkCircleOutline className={textAreaStyles.listIcon} />
-            <p className={textAreaStyles.listItemText}>
+          <li className={styles.listItem}>
+            <IoIosCheckmarkCircleOutline className={styles.listIcon} />
+            <p className={styles.listItemText}>
               bring designs to life through practical code.
             </p>
           </li>
-          <li className={textAreaStyles.listItem}>
-            <IoIosCheckmarkCircleOutline className={textAreaStyles.listIcon} />
-            <p className={textAreaStyles.listItemText}>
+          <li className={styles.listItem}>
+            <IoIosCheckmarkCircleOutline className={styles.listIcon} />
+            <p className={styles.listItemText}>
               illustrations, icons, and logos.
             </p>
           </li>
-        </ul>
+        </ul> */}
       </div>
-      <div className={textAreaStyles.contactButtonWrapper}>
-        <p className={textAreaStyles.buttonParagraph}>
-          Interested in hiring me?
-        </p>
+      <div className={styles.contactButtonWrapper}>
+        <p className={styles.buttonParagraph}>Interested in hiring me?</p>
         <a.button
           style={{
             transform: y.interpolate(v => `translateY(${v}px)`),
             boxShadow: boxShadow,
           }}
-          className={textAreaStyles.contactButton}
+          className={styles.contactButton}
           data-type="contactLink"
           onClick={e => scroll(e.target.dataset.type)}
           onMouseEnter={() =>
