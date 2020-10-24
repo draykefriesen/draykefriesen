@@ -22,11 +22,9 @@ const TextHeader = ({ scroll }) => {
             <mark>
               <b>design</b>
             </mark>
-            {/* , */}
             <mark>
               <b>code</b>
             </mark>
-            {/* , */}
             and
             <mark>
               <b>illustrate</b>

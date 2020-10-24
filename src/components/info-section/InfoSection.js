@@ -1,6 +1,7 @@
 import React from "react"
 import TextSection from "./text-section/TextSection"
 import GraphicCard from "./graphic-card/GraphicCard"
+import PricingSection from "./pricing-section/PricingSection"
 import {
   BackgroundGradientTop,
   BackgroundGradientBottom,
@@ -34,6 +35,7 @@ const InfoSection = ({ scroll }) => {
           cardNumber="cardThree"
         />
       </div>
+      <PricingSection />
       <BackgroundStripes2 />
       <BackgroundGradientBottom section="info-section" />
     </div>
