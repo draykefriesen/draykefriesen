@@ -15,7 +15,7 @@ const PricingSection = ({ pricingRef }) => {
       <div className={styles.pricingMainTextArea}>
         <h2 className={styles.pricingMainHeader}>
           <span>$0</span> Down,
-          <br className={styles.mdBreak} /> <span>$150</span> Per Month,{" "}
+          <br className={styles.mdBreak} /> <span>$160</span> Per Month,{" "}
           <br className={styles.alwaysBreak} />
           No Minimum Contract
         </h2>

@@ -2,17 +2,23 @@ import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useSpring, animated as a, config } from "react-spring"
-import {BackgroundGradientTop, BackgroundGradientBottom} from '../background-gradient/BackgroundGradient'
+import {
+  BackgroundGradientTop,
+  BackgroundGradientBottom,
+} from "../background-gradient/BackgroundGradient"
 import styles from "./hero.module.scss"
 
 const HeroSection = () => {
-  const {allFile} = useStaticQuery(graphql`
+  const { allFile } = useStaticQuery(graphql`
     query {
-      allFile(filter: {relativeDirectory: {eq: "hero-images"}}, sort: {order: ASC, fields: name}) {
+      allFile(
+        filter: { relativeDirectory: { eq: "hero-images" } }
+        sort: { order: ASC, fields: name }
+      ) {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 1280) {
+              fluid(maxWidth: 650) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -136,10 +142,9 @@ const HeroSection = () => {
     }
   }, [set])
 
-  
   return (
     <section className={styles.heroSection}>
-      <BackgroundGradientTop section='hero' />
+      <BackgroundGradientTop section="hero" />
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
@@ -247,30 +252,41 @@ const HeroSection = () => {
         />
       </svg>
       <div className={styles.heroContent}>
-    
-            <Img
-              fluid={allFile.edges[0].node.childImageSharp.fluid}
-              objectFit="contain"
-              className={styles.portraitImage}
-            />
-          <div className={styles.textContainer}>
-            <div className={styles.borderTop} />
-            <Img
-                fluid={allFile.edges[1].node.childImageSharp.fluid}
-                objectFit="contain"
-                className={styles.nameTextImage}
-              />
-            <div className={styles.textContainerContent}>
-              <div className={styles.circle}/>
-              <p className={styles.bioText}>
-               I'm a <mark><b>JavaScript developer</b></mark>, <br/><mark><b>web designer</b></mark> and <mark><b>illustrator</b></mark>.<br/> I
-                create custom web-apps, illustrations, logos, and a whole lot of
-                in-between. Feel free to reach out if you have any questions.
-              </p>
-            </div>
+        <Img
+          fluid={allFile.edges[0].node.childImageSharp.fluid}
+          objectFit="contain"
+          className={styles.portraitImage}
+        />
+        <div className={styles.textContainer}>
+          <div className={styles.borderTop} />
+          <Img
+            fluid={allFile.edges[1].node.childImageSharp.fluid}
+            objectFit="contain"
+            className={styles.nameTextImage}
+          />
+          <div className={styles.textContainerContent}>
+            <div className={styles.circle} />
+            <p className={styles.bioText}>
+              I'm a{" "}
+              <mark>
+                <b>JavaScript developer</b>
+              </mark>
+              , <br />
+              <mark>
+                <b>web designer</b>
+              </mark>{" "}
+              and{" "}
+              <mark>
+                <b>illustrator</b>
+              </mark>
+              .<br /> I create custom web-apps, illustrations, logos, and a
+              whole lot of in-between. Feel free to reach out if you have any
+              questions.
+            </p>
           </div>
+        </div>
       </div>
-      <BackgroundGradientBottom  section='hero'/>
+      <BackgroundGradientBottom section="hero" />
     </section>
   )
 }

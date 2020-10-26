@@ -27,30 +27,10 @@ const TextHeader = ({ aboutRef }) => {
           </p>
           <p className={styles.descriptionSubText}>
             I work with small businesses to build the best performing and best
-            looking projects. This helps to bring more customers to their sites,
-            and more revenue to their business.
+            looking projects, which helps bring in new customers and more
+            revenue to their business.
           </p>
         </div>
-        {/* <ul className={styles.list}>
-          <li className={styles.listItem}>
-            <IoIosCheckmarkCircleOutline className={styles.listIcon} />
-            <p className={styles.listItemText}>
-              custom designs and mockups.
-            </p>
-          </li>
-          <li className={styles.listItem}>
-            <IoIosCheckmarkCircleOutline className={styles.listIcon} />
-            <p className={styles.listItemText}>
-              bring designs to life through practical code.
-            </p>
-          </li>
-          <li className={styles.listItem}>
-            <IoIosCheckmarkCircleOutline className={styles.listIcon} />
-            <p className={styles.listItemText}>
-              illustrations, icons, and logos.
-            </p>
-          </li>
-        </ul> */}
       </div>
     </>
   )
