@@ -25,6 +25,14 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: "pdx3ntj",
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -56,14 +64,7 @@ module.exports = {
         icon: `src/media/svg/letter-logo.svg`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        typekit: {
-          id: "pdx3ntj",
-        },
-      },
-    },
+
     `gatsby-plugin-offline`,
   ],
 }
