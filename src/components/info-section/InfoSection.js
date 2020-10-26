@@ -2,6 +2,7 @@ import React from "react"
 import TextSection from "./text-section/TextSection"
 import GraphicCard from "./graphic-card/GraphicCard"
 import PricingSection from "./pricing-section/PricingSection"
+import ContactButton from "./contact-button/ContactButton"
 import {
   BackgroundGradientTop,
   BackgroundGradientBottom,
@@ -9,11 +10,11 @@ import {
 import { BackgroundStripes2 } from "../background-stripes/BackgroundStripes"
 import styles from "./infoSection.module.scss"
 
-const InfoSection = ({ scroll }) => {
+const InfoSection = ({ scroll, aboutRef, pricingRef }) => {
   return (
-    <div className={styles.infoWrapper}>
+    <section className={styles.infoWrapper}>
       <BackgroundGradientTop section="info-section" />
-      <TextSection scroll={scroll} />
+      <TextSection aboutRef={aboutRef} />
       <div className={styles.graphicCardWrapper}>
         <GraphicCard
           type="web-dev"
@@ -35,10 +36,11 @@ const InfoSection = ({ scroll }) => {
           cardNumber="cardThree"
         />
       </div>
-      <PricingSection />
+      <PricingSection pricingRef={pricingRef} />
+      <ContactButton scroll={scroll} />
       <BackgroundStripes2 />
       <BackgroundGradientBottom section="info-section" />
-    </div>
+    </section>
   )
 }
 

@@ -1,44 +1,59 @@
 import React from "react"
-import headerStyles from "./header.module.scss"
-
+import styles from "./header.module.scss"
 
 const Header = ({ scroll }) => {
-  
   return (
-    <header className={headerStyles.pageHeader}>
-      <nav className={headerStyles.headerNav}>
-        <ul className={headerStyles.navListWrapper}>
-          <li className={headerStyles.navItem}>
+    <header className={styles.pageHeader}>
+      <nav className={styles.headerNav}>
+        <ul className={styles.navListWrapper}>
+          <li className={styles.navItem}>
             <button
               onClick={e => scroll(e.target.dataset.type)}
               data-type="aboutLink"
-              className={headerStyles.navButton}
+              className={styles.navButton}
+            >
+              About
+            </button>
+          </li>{" "}
+          <li className={styles.navItem}>
+            <button
+              onClick={e => scroll(e.target.dataset.type)}
+              data-type="pricingLink"
+              className={styles.navButton}
+            >
+              Pricing
+            </button>
+          </li>
+          <li className={styles.navItem}>
+            <button
+              onClick={e => scroll(e.target.dataset.type)}
+              data-type="projectsLink"
+              className={styles.navButton}
             >
               Projects
             </button>
           </li>
-          <li className={headerStyles.navItem}>
-              <button
-                onClick={e => scroll(e.target.dataset.type)}
-                data-type="skillsLink"
-                className={headerStyles.navButton}
-              >
-                Skills
-              </button>
+          <li className={styles.navItem}>
+            <button
+              onClick={e => scroll(e.target.dataset.type)}
+              data-type="skillsLink"
+              className={styles.navButton}
+            >
+              Skills
+            </button>
           </li>
-
-          <li className={headerStyles.navItem}>
+          <li className={styles.navItem}>
             <button
               onClick={e => scroll(e.target.dataset.type)}
               data-type="contactLink"
-              className={headerStyles.navButton}
+              className={styles.navButton}
             >
               Contact
             </button>
           </li>
         </ul>
       </nav>
-    </ header>
+    </header>
   )
 }
 

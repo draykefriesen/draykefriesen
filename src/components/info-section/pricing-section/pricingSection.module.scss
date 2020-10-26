@@ -6,53 +6,94 @@
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto auto;
   gap: 2rem;
-  margin: 0 8rem 8rem;
+  margin: 20rem auto 8rem;
+  padding: 0 8rem;
+  max-width: 3000px;
+  @include mediaMd {
+    grid-column: 1 / -1;
+    margin-top: 15rem;
+    padding: 0 2rem;
+  }
 }
 
 .illustration {
-  width: 80%;
+  width: 100%;
   grid-column: 1 / 3;
   grid-row: 1 / -1;
   margin: 0 auto auto;
 }
 
 .pricing-main-text-area {
-  grid-column: 3 / -1;
+  grid-column: 1 / -1;
   grid-row: 1;
   display: flex;
   flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .pricing-main-header {
   font-size: 3.5rem;
-  margin-bottom: 0;
+  margin: 0 auto;
+  text-align: center;
   span {
-    color: $primary-color-40;
+    color: $primary-color-45;
+    &:nth-of-type(2) {
+    }
+  }
+  .always-break {
+    display: block;
+  }
+  .md-break {
+    display: none;
+    @include mediaMd {
+      display: block;
+    }
+  }
+  @include mediaLg {
+    font-size: 3rem;
+  }
+  @include mediaSm {
+    font-size: 2.5rem;
   }
 }
 
 .pricing-main-text {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.4;
+  text-align: center;
 }
 
 .list-group {
-  grid-column: 3 /-1;
+  grid-column: 1 /-1;
   grid-row: 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-template-rows: repeat(3, auto);
+  gap: 2rem;
   list-style: none;
   padding: 0;
+  max-width: 800px;
+  @include mediaMd {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 .list-item {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
   margin-bottom: 1rem;
-  padding-right: 4rem;
+  @include mediaMd {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    width: 75%;
+    margin: 0 auto 1rem;
+  }
+  @include mediaSm {
+    width: 100%;
+  }
 }
 
 .checkmark {
@@ -62,7 +103,10 @@
   height: 35px;
   color: $primary-color-50;
   vertical-align: middle;
-  margin: auto 1rem auto 0;
+  margin: 0 1rem auto 0;
+  @include mediaMd {
+    margin: auto;
+  }
 }
 
 .list-item-header {
@@ -72,6 +116,14 @@
   font-size: 1.8rem;
   color: $primary-color-50;
   margin: auto 0;
+  @include mediaMd {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: center;
+  }
+  @include mediaSm {
+    font-size: 1.5rem;
+  }
 }
 
 .list-item-text {
@@ -80,4 +132,9 @@
   font-size: 1.2rem;
   font-weight: 500;
   margin-top: 0.5rem;
+  @include mediaMd {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+  }
 }

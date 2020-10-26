@@ -8,12 +8,20 @@ import Contact from "../components/contact/Contact"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
+  const aboutRef = useRef()
+  const pricingRef = useRef()
   const projectsRef = useRef()
   const skillsRef = useRef()
   const contactRef = useRef()
 
   const handleScroll = datatype => {
     if (datatype === "aboutLink") {
+      aboutRef.current.scrollIntoView({ block: "start", behavior: "smooth" })
+    }
+    if (datatype === "pricingLink") {
+      pricingRef.current.scrollIntoView({ block: "start", behavior: "smooth" })
+    }
+    if (datatype === "projectsLink") {
       projectsRef.current.scrollIntoView({ block: "start", behavior: "smooth" })
     }
     if (datatype === "skillsLink") {
@@ -28,7 +36,11 @@ const IndexPage = () => {
     <Layout scroll={handleScroll}>
       <SEO title="Home" />
       <Hero />
-      <InfoSection scroll={handleScroll} />
+      <InfoSection
+        scroll={handleScroll}
+        aboutRef={aboutRef}
+        pricingRef={pricingRef}
+      />
       <Projects projectsSectionRef={projectsRef} />
       <Skills skillsSectionRef={skillsRef} />
       <Contact contactCardRef={contactRef} />
