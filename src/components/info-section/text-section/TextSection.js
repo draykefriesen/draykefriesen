@@ -1,5 +1,4 @@
 import React from "react"
-import { IoIosCheckmarkCircleOutline } from "react-icons/io"
 import styles from "./textSection.module.scss"
 
 const TextHeader = ({ aboutRef }) => {
