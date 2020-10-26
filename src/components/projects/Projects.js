@@ -36,8 +36,6 @@ const Projects = ({ projectsSectionRef }) => {
       <h2 className={styles.sectionTitle} ref={projectsSectionRef}>
         Projects
       </h2>
-      {/* <BackgroundCircles className={styles.backgroundCircles} />
-        <BackgroundChevron className={styles.backgroundChevron} /> */}
       <div className={styles.projectsSlider}>
         <div className={styles.card}>
           <OutboundLink
