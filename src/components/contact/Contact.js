@@ -124,20 +124,6 @@ const Contact = ({ contactCardRef }) => {
                 >
                   <IoLogoYoutube className={styles.secondaryContactIcon} />
                 </a>
-                {/* <a
-                href="https://www.behance.net/draykefriesen"
-                className={styles.secondaryContactIconLink}
-              >
-                <AiOutlineBehance
-                  className={styles.secondaryContactIcon}
-                />
-              </a> */}
-                {/* <a
-                href="https://codepen.io/draykefriesen"
-                className={styles.secondaryContactIconLink}
-              >
-                <DiCodepen className={styles.secondaryContactIcon} />
-              </a> */}
               </div>
             </div>
           </div>
