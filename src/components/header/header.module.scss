@@ -5,13 +5,16 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  position: absolute;
   background: transparent;
   z-index: 100;
 }
 
 .header-nav {
   width: 100%;
+  @include mediaSm {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .nav-list-wrapper {
@@ -60,10 +63,6 @@
   }
   @include mediaLg {
     width: 100%;
-  }
-  @include mediaSm {
-    width: 90%;
-    margin: 0 auto;
   }
 }
 
