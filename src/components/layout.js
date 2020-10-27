@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header/header"
-import Footer from './Footer/Footer'
+import Footer from "./Footer/Footer"
 import "../styles/global.scss"
 
 const Layout = ({ children, scroll }) => {
@@ -23,6 +23,5 @@ const Layout = ({ children, scroll }) => {
     </>
   )
 }
-
 
 export default Layout
