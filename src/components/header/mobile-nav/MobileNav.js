@@ -5,7 +5,6 @@ import styles from "./mobileNav.module.scss"
 
 const MobileNav = ({ scroll }) => {
   const [isMenuOpen, toggleMenu] = useState(false)
-  console.log(isMenuOpen)
   const { opacity, transform } = useSpring({
     opacity: isMenuOpen ? 1 : 0,
     transform: `scale(${isMenuOpen ? 1 : 0})`,
