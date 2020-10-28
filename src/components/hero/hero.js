@@ -18,7 +18,7 @@ const HeroSection = () => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 650, traceSVG: { color: "#a8abff" }) {
+              fluid(maxWidth: 650, traceSVG: { color: "#a8abff55" }) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
