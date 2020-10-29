@@ -29,7 +29,7 @@ const PricingSection = ({ pricingRef }) => {
       <ul className={styles.listGroup}>
         <li className={styles.listItem}>
           <IoIosCall className={styles.checkmark} />
-          <h3 className={styles.listItemHeader}>24/7 Customer Service</h3>
+          <h3 className={styles.listItemHeader}>Personal Customer Service</h3>
           <p className={styles.listItemText}>
             call anytime for direct assistance from me, no call centers or time
             spent on hold.
