@@ -54,8 +54,7 @@ const PricingSection = ({ pricingRef }) => {
           <IoMdAnalytics className={styles.checkmark} />
           <h3 className={styles.listItemHeader}>Analytics</h3>
           <p className={styles.listItemText}>
-            Get set up with Google analytics for free to monitor your traffic
-            and where it comes from.
+            Get set up with Google analytics for free to monitor your traffic.
           </p>
         </li>
         <li className={styles.listItem}>
