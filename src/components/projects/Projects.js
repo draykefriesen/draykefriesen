@@ -15,7 +15,7 @@ import styles from "./projects.module.scss"
 
 const Projects = ({ projectsSectionRef }) => {
   const { allFile } = useStaticQuery(graphql`
-    query MyQuery {
+    query {
       allFile(filter: { relativeDirectory: { eq: "project-images" } }) {
         edges {
           node {

@@ -20,6 +20,9 @@
 .top-gradient[data-section="projects"] {
   height: 500px;
 }
+.top-gradient[data-section="illustration-showcase"] {
+  height: 500px;
+}
 .top-gradient[data-section="skills"] {
   height: 500px;
 }
@@ -62,6 +65,19 @@
 }
 
 .bottom-gradient[data-section="projects"] {
+  height: 700px;
+  @include mediaLg {
+    height: 500px;
+  }
+  @include mediaMd {
+    height: 350px;
+  }
+  @include mediaSm {
+    height: 200px;
+  }
+}
+
+.bottom-gradient[data-section="illustration-showcase"] {
   height: 700px;
   @include mediaLg {
     height: 500px;

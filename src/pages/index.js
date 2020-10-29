@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import Hero from "../components/hero/hero"
 import InfoSection from "../components/info-section/InfoSection"
 import Projects from "../components/projects/Projects"
+import IllustrationShowcase from "../components/illustration-showcase/IllustrationShowcase"
 import Skills from "../components/skills/Skills"
 import Contact from "../components/contact/Contact"
 import SEO from "../components/seo"
@@ -42,6 +43,7 @@ const IndexPage = () => {
         pricingRef={pricingRef}
       />
       <Projects projectsSectionRef={projectsRef} />
+      <IllustrationShowcase />
       <Skills skillsSectionRef={skillsRef} />
       <Contact contactCardRef={contactRef} />
     </Layout>
