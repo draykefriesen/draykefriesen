@@ -17,6 +17,7 @@ const MobileNav = ({ scroll }) => {
       <button
         className={styles.mobileMenuButton}
         onClick={() => toggleMenu(prev => !prev)}
+        aria-label="Close"
       >
         <IoIosMenu className={styles.mobileMenuIcon} />
       </button>

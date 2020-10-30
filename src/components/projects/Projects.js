@@ -52,7 +52,7 @@ const Projects = ({ projectsSectionRef }) => {
               className={styles.projectImage}
             />
           </OutboundLink>
-          <h4 className={styles.projectTitle}>
+          <h3 className={styles.projectTitle}>
             <ExpressvgIcon className={styles.projectIcon} />
             Expressvg
             <a
@@ -63,7 +63,7 @@ const Projects = ({ projectsSectionRef }) => {
             >
               <FiExternalLink className={styles.externalLinkIcon} />
             </a>
-          </h4>
+          </h3>
           <p className={styles.projectDescription}>
             Expressvg allows you to customize SVG files to your specifications
             through color, effects, sizing and positioning. Download as SVG or
