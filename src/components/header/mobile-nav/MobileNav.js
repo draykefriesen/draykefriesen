@@ -8,6 +8,9 @@ const MobileNav = ({ scroll }) => {
   const { opacity, transform } = useSpring({
     opacity: isMenuOpen ? 1 : 0,
     transform: `scale(${isMenuOpen ? 1 : 0})`,
+    config: {
+      tension: 190,
+    },
   })
   return (
     <>
@@ -30,23 +33,21 @@ const MobileNav = ({ scroll }) => {
           <ul className={styles.mobileNavList}>
             <li>
               <button
-                onClick={e => {
-                  scroll(e.target.dataset.type)
+                onClick={() => {
+                  scroll("aboutLink")
                   toggleMenu(false)
                 }}
-                data-type="aboutLink"
                 className={styles.mobileNavButton}
               >
                 About
               </button>
-            </li>{" "}
+            </li>
             <li>
               <button
-                onClick={e => {
-                  scroll(e.target.dataset.type)
+                onClick={() => {
+                  scroll("pricingLink")
                   toggleMenu(false)
                 }}
-                data-type="pricingLink"
                 className={styles.mobileNavButton}
               >
                 Pricing
@@ -54,11 +55,10 @@ const MobileNav = ({ scroll }) => {
             </li>
             <li>
               <button
-                onClick={e => {
-                  scroll(e.target.dataset.type)
+                onClick={() => {
+                  scroll("projectsLink")
                   toggleMenu(false)
                 }}
-                data-type="projectsLink"
                 className={styles.mobileNavButton}
               >
                 Projects
@@ -66,11 +66,21 @@ const MobileNav = ({ scroll }) => {
             </li>
             <li>
               <button
-                onClick={e => {
-                  scroll(e.target.dataset.type)
+                onClick={() => {
+                  scroll("illustrationLink")
                   toggleMenu(false)
                 }}
-                data-type="skillsLink"
+                className={styles.mobileNavButton}
+              >
+                Illustrations
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  scroll("skillsLink")
+                  toggleMenu(false)
+                }}
                 className={styles.mobileNavButton}
               >
                 Skills
@@ -78,11 +88,10 @@ const MobileNav = ({ scroll }) => {
             </li>
             <li>
               <button
-                onClick={e => {
-                  scroll(e.target.dataset.type)
+                onClick={() => {
+                  scroll("contactLink")
                   toggleMenu(false)
                 }}
-                data-type="contactLink"
                 className={styles.mobileNavButton}
               >
                 Contact

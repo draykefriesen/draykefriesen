@@ -34,16 +34,34 @@
   grid-row: 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
   width: 80%;
   max-width: 1500px;
   margin: 0 auto;
+  @include mediaMd {
+    grid-template-columns: 1fr 1fr;
+  }
   @include mediaSm {
     grid-template-columns: 1fr;
+    width: 85%;
   }
 }
 
 .illustration-image {
   margin: 2rem;
   box-shadow: 0 50px 100px -20px hsla(238, 30%, 28%, 0.25),
-    0 30px 60px -30px rgba(0, 0, 0, 0.3);
+    0 30px 60px -30px hsla(0, 0%, 0%, 0.3);
+  @include mediaSm {
+    width: 90%;
+    max-height: 480px;
+    margin: 2rem auto;
+  }
+}
+
+.illustration-image-span-2 {
+  grid-column: auto / span 2;
+  @include mediaSm {
+    grid-column: 1;
+    width: 100%;
+  }
 }

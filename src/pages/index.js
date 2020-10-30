@@ -12,6 +12,7 @@ const IndexPage = () => {
   const aboutRef = useRef()
   const pricingRef = useRef()
   const projectsRef = useRef()
+  const illustrationShowcaseRef = useRef()
   const skillsRef = useRef()
   const contactRef = useRef()
 
@@ -24,6 +25,12 @@ const IndexPage = () => {
     }
     if (datatype === "projectsLink") {
       projectsRef.current.scrollIntoView({ block: "start", behavior: "smooth" })
+    }
+    if (datatype === "illustrationLink") {
+      illustrationShowcaseRef.current.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      })
     }
     if (datatype === "skillsLink") {
       skillsRef.current.scrollIntoView({ block: "start", behavior: "smooth" })
@@ -43,7 +50,7 @@ const IndexPage = () => {
         pricingRef={pricingRef}
       />
       <Projects projectsSectionRef={projectsRef} />
-      <IllustrationShowcase />
+      <IllustrationShowcase illustrationShowcaseRef={illustrationShowcaseRef} />
       <Skills skillsSectionRef={skillsRef} />
       <Contact contactCardRef={contactRef} />
     </Layout>

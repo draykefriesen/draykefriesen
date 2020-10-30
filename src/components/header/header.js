@@ -10,8 +10,7 @@ const Header = ({ scroll }) => {
         <ul className={styles.navListWrapper}>
           <li className={styles.navItem}>
             <button
-              onClick={e => scroll(e.target.dataset.type)}
-              data-type="aboutLink"
+              onClick={() => scroll("aboutLink")}
               className={styles.navButton}
             >
               About
@@ -19,8 +18,7 @@ const Header = ({ scroll }) => {
           </li>{" "}
           <li className={styles.navItem}>
             <button
-              onClick={e => scroll(e.target.dataset.type)}
-              data-type="pricingLink"
+              onClick={() => scroll("pricingLink")}
               className={styles.navButton}
             >
               Pricing
@@ -28,8 +26,7 @@ const Header = ({ scroll }) => {
           </li>
           <li className={styles.navItem}>
             <button
-              onClick={e => scroll(e.target.dataset.type)}
-              data-type="projectsLink"
+              onClick={() => scroll("projectsLink")}
               className={styles.navButton}
             >
               Projects
@@ -37,8 +34,15 @@ const Header = ({ scroll }) => {
           </li>
           <li className={styles.navItem}>
             <button
-              onClick={e => scroll(e.target.dataset.type)}
-              data-type="skillsLink"
+              onClick={() => scroll("illustrationLink")}
+              className={styles.navButton}
+            >
+              Illustrations
+            </button>
+          </li>
+          <li className={styles.navItem}>
+            <button
+              onClick={() => scroll("skillsLink")}
               className={styles.navButton}
             >
               Skills
@@ -46,8 +50,7 @@ const Header = ({ scroll }) => {
           </li>
           <li className={styles.navItem}>
             <button
-              onClick={e => scroll(e.target.dataset.type)}
-              data-type="contactLink"
+              onClick={() => scroll("contactLink")}
               className={styles.navButton}
             >
               Contact

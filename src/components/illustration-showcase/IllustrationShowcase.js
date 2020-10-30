@@ -8,10 +8,13 @@ import {
 import { BackgroundStripes2 } from "../background-stripes/BackgroundStripes"
 import styles from "./illustrationShowcase.module.scss"
 
-const IllustrationShowcase = () => {
+const IllustrationShowcase = ({ illustrationShowcaseRef }) => {
   const { allFile } = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativeDirectory: { eq: "illustration-showcase" } }) {
+      allFile(
+        filter: { relativeDirectory: { eq: "illustration-showcase" } }
+        sort: { fields: name }
+      ) {
         edges {
           node {
             childImageSharp {
@@ -24,16 +27,20 @@ const IllustrationShowcase = () => {
       }
     }
   `)
+
   return (
     <section className={styles.sectionWrapper}>
       <BackgroundGradientTop section="illustration-showcase" />
-      <h2 className={styles.sectionHeader}>Illustrations</h2>
+      <h2 className={styles.sectionHeader} ref={illustrationShowcaseRef}>
+        Illustrations
+      </h2>
       <div className={styles.illustrationsContainer}>
         {allFile.edges.map(edge => (
           <Img
             fluid={edge.node.childImageSharp.fluid}
             objectFit="contain"
-            className={styles.illustrationImage}
+            className={`${styles.illustrationImage} ${edge.node.childImageSharp
+              .fluid.aspectRatio > 1 && styles.illustrationImageSpan2}`}
           />
         ))}
       </div>
