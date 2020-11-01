@@ -36,7 +36,7 @@ const Contact = ({ contactCardRef }) => {
     <section className={styles.contentWrapper}>
       <BackgroundGradientTop section="contact" />
       <div className={styles.contactContent}>
-        <h2 className={styles.sectionTitle} ref={contactCardRef}>
+        <h2 className={`section-header`} ref={contactCardRef}>
           Contact
         </h2>
         <div className={styles.cardWrapper}>

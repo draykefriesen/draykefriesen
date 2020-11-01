@@ -17,16 +17,6 @@
 .section-header {
   grid-column: 1 / -1;
   grid-row: 2;
-  font-size: 3.5rem;
-  text-align: center;
-  color: $grey-900;
-  margin: 0 0 1rem;
-  @include mediaLg {
-    font-size: 3rem;
-  }
-  @include mediaSm {
-    font-size: 2.5rem;
-  }
 }
 
 .illustrations-container {

@@ -1,8 +1,13 @@
 @import "./config.module.scss";
+@import "./card.scss";
 
 html {
   font-size: 16px;
   overflow-x: hidden;
+  // * 1. Correct the line height in all browsers.
+  // * 2. Prevent adjustments of font size after orientation changes in iOS.
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 body {
@@ -11,10 +16,10 @@ body {
   background: $grey-100;
   overflow-x: hidden;
 }
+
 body,
 button {
   font-family: forma-djr-display, sans-serif;
-  font-display: swap;
 }
 
 .footer {
@@ -40,31 +45,23 @@ p {
   color: $grey-800;
 }
 
-//////////////////////////////////////////////////////////
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+// reused styles //
 
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
-
-body {
-  margin: 0;
+.section-header {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: $grey-900;
+  margin: 0 0 2rem;
+  span {
+    color: $primary-color;
+  }
+  @include mediaLg {
+    font-size: 3rem;
+  }
+  @include mediaSm {
+    font-size: 2.5rem;
+  }
 }
 
 /**
@@ -74,6 +71,9 @@ body {
 main {
   display: block;
 }
+
+//////////////////////////////////////////////////////////
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -205,7 +205,6 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */

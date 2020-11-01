@@ -31,9 +31,12 @@ const Projects = ({ projectsSectionRef }) => {
   `)
 
   return (
-    <section className={styles.projectsWrapper}>
+    <section className={styles.projectsSection}>
       <BackgroundGradientTop section="projects" />
-      <h2 className={styles.sectionTitle} ref={projectsSectionRef}>
+      <h2
+        className={`section-header ${styles.sectionHeader}`}
+        ref={projectsSectionRef}
+      >
         Projects
       </h2>
       <div className={styles.projectsSlider}>

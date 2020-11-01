@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import SEO from "../components/seo"
-import Styles from "../styles/404.module.scss"
+import Styles from "../styles/pages/404.module.scss"
 
 const NotFoundPage = () => (
   <div className={Styles.wrapper}>

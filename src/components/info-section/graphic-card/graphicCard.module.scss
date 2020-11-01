@@ -15,11 +15,8 @@
 }
 
 .card {
-  background: linear-gradient(to bottom, $primary-color-1 80%, $grey-200 20%);
-  border-radius: 5px;
   width: 325px;
   padding-bottom: 8rem;
-  box-shadow: $box-shadow;
   margin: 0 auto;
   @include mediaLg {
     width: 300px;
@@ -34,35 +31,22 @@
 
 .card-one {
   .svg-illustration {
-    margin-top: -120px;
     transform: translateX(3%);
-  }
-  @include mediaMd {
   }
 }
 
 .card-two {
-  .svg-illustration {
-    margin-top: -120px;
-  }
   @include mediaMd {
     margin-top: 5rem;
   }
 }
 .card-three {
-  .svg-illustration {
-    margin-top: -120px;
-  }
   @include mediaMd {
     margin-top: 5rem;
   }
 }
 .border-top {
   height: 0.8rem;
-  grid-column: 1 / -1;
-  background: linear-gradient(to right, $primary-color-20, $primary-color-30);
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
 }
 
 .card-header {
@@ -80,9 +64,6 @@
   line-height: 1.3;
   margin-top: 0;
   height: 90px;
-  // @include mediaMd {
-  //   height: 100px;
-  // }
 }
 
 .text-list {
@@ -114,7 +95,7 @@
   width: 350px;
   height: 100%;
   display: block;
-  margin: 0 auto;
+  margin: -120px auto 0;
   @include mediaLg {
     width: 325px;
   }

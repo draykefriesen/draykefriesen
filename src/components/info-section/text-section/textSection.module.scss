@@ -1,12 +1,9 @@
 @import "../../../styles/config.module.scss";
 
-.main-text-section {
+.main-text-wrapper {
   grid-column: 1 / -1;
   grid-row: 1;
   margin: 0;
-}
-
-.main-text-wrapper {
   display: flex;
   flex-direction: column;
   max-width: 800px;
@@ -14,18 +11,8 @@
   padding: 0 2rem;
 }
 
-.text-section-title {
-  font-size: 3.5rem;
-  font-weight: $bold;
-  line-height: 1;
-  letter-spacing: -0.05rem;
-  color: $grey-900;
-  margin: 0 0 1rem 0;
-  text-align: center;
-  span {
-    color: $primary-color;
-  }
-  @include mediaLg {
+.section-header {
+  @include mediaSm {
     font-size: 3rem;
   }
 }
@@ -50,66 +37,3 @@
   text-align: center;
   margin: 0;
 }
-
-// .list {
-//   display: inline-block;
-//   list-style: none;
-//   padding-left: 1rem;
-//   margin: 2rem auto 0;
-// }
-
-// .list-item {
-//   display: flex;
-//   margin: 1rem 0;
-// }
-
-// .list-icon {
-//   position: absolute;
-//   vertical-align: middle;
-//   font-size: 1.5rem;
-//   color: $primary-color-45;
-// }
-
-// .list-item-text {
-//   color: $grey-800;
-//   font-size: 1.2rem;
-//   display: inline-block;
-//   margin: 0 2rem;
-// }
-
-// .contact-button-wrapper {
-//   grid-column: 1 / -1;
-//   grid-row: 3;
-//   justify-self: center;
-//   text-align: center;
-//   margin: 12rem 0;
-// }
-
-// .button-paragraph {
-//   color: $grey-700;
-//   font-size: 1.6rem;
-//   margin-top: 0;
-// }
-
-// .contact-button {
-//   background: linear-gradient(
-//     -134deg,
-//     hsl(218, 100%, 60%),
-//     hsl(258, 100%, 55%)
-//   );
-//   color: #fff;
-//   text-decoration: none;
-//   text-align: center;
-//   border: none;
-//   border-radius: 50px;
-//   font-size: 1rem;
-//   font-family: forma-djr-display, sans-serif;
-//   font-weight: $bold;
-//   letter-spacing: 0.8px;
-//   padding: 1rem 2rem;
-//   cursor: pointer;
-
-//   &:focus {
-//     outline: none;
-//   }
-// }

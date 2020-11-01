@@ -15,19 +15,14 @@
 }
 
 .contact-button {
-  background: linear-gradient(
-    -134deg,
-    hsl(218, 100%, 60%),
-    hsl(258, 100%, 55%)
-  );
+  background: linear-gradient(-134deg, $blue, $purple);
   color: #fff;
   text-decoration: none;
   text-align: center;
   border: none;
   border-radius: 50px;
   font-size: 1rem;
-  font-family: forma-djr-display, sans-serif;
-  font-weight: $bold;
+  font-weight: 700;
   letter-spacing: 0.8px;
   padding: 1rem 2rem;
   cursor: pointer;

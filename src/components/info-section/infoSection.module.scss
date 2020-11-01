@@ -5,7 +5,6 @@
   display: grid;
   grid-template-columns: 4rem 1fr 1fr 1fr 4rem;
   grid-template-rows: repeat(5, auto);
-  position: relative;
   padding-top: 15rem;
   @include mediaLg {
     grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
@@ -22,44 +21,5 @@
   @include mediaMd {
     flex-direction: column;
     margin-top: 10rem;
-  }
-}
-
-.background-stripes {
-  top: 0;
-  left: 0;
-  span {
-    display: inline-block;
-    position: absolute;
-    border-radius: 3px;
-    &:first-child {
-      height: 12%;
-      width: 100%;
-      background: $grey-300;
-    }
-    &:nth-child(2) {
-      height: 7%;
-      width: 50%;
-      background: $grey-400;
-      top: 10%;
-      left: 55%;
-      @include mediaMd {
-        height: 5%;
-      }
-    }
-    &:nth-child(3) {
-      height: 9%;
-      width: 100%;
-      background: $grey-400;
-      bottom: -2%;
-      left: 0;
-    }
-    &:nth-child(4) {
-      height: 8%;
-      width: 50%;
-      background: $grey-300;
-      bottom: 3%;
-      left: 0;
-    }
   }
 }
