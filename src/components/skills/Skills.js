@@ -11,7 +11,7 @@ const Skills = ({ skillsSectionRef }) => {
   return (
     <section className={styles.skillsSectionWrapper}>
       <BackgroundGradientTop section="skills" />
-      <h2 className={styles.skillsSectionHeader} ref={skillsSectionRef}>
+      <h2 className="section-header" ref={skillsSectionRef}>
         Skills
       </h2>
       <TechListSection />

@@ -1,12 +1,12 @@
-@import "./config.module.scss";
+@import "../config.module.scss";
 
-.card {
+@mixin card {
   background: linear-gradient(to bottom, $primary-color-1 80%, $grey-200 20%);
   border-radius: 5px;
   box-shadow: $box-shadow;
 }
 
-.border-top {
+@mixin borderTop {
   height: 1rem;
   width: 100%;
   background: linear-gradient(to right, $primary-color-15, $primary-color-20);

@@ -29,12 +29,9 @@ const IllustrationShowcase = ({ illustrationShowcaseRef }) => {
   `)
 
   return (
-    <section className={styles.sectionWrapper}>
+    <section className={`section-grid ${styles.sectionGrid}`}>
       <BackgroundGradientTop section="illustration-showcase" />
-      <h2
-        className={`section-header ${styles.sectionHeader}`}
-        ref={illustrationShowcaseRef}
-      >
+      <h2 className={styles.sectionHeader} ref={illustrationShowcaseRef}>
         Illustrations
       </h2>
       <div className={styles.illustrationsContainer}>

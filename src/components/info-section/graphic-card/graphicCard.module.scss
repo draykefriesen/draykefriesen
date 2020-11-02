@@ -1,4 +1,5 @@
 @import "../../../styles/config.module.scss";
+@import "../../../styles/components/card.module.scss";
 
 .card-wrapper {
   display: flex;
@@ -15,6 +16,7 @@
 }
 
 .card {
+  @include card;
   width: 325px;
   padding-bottom: 8rem;
   margin: 0 auto;
@@ -27,6 +29,11 @@
   @include mediaSm {
     width: 300px;
   }
+}
+
+.border-top {
+  @include borderTop;
+  height: 0.8rem;
 }
 
 .card-one {
@@ -45,12 +52,9 @@
     margin-top: 5rem;
   }
 }
-.border-top {
-  height: 0.8rem;
-}
 
 .card-header {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-size: 1.6rem;
   text-align: center;
   color: $primary-color;

@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header/header"
 import Footer from "./Footer/Footer"
+import "../styles/normalize.scss"
 import "../styles/global.scss"
 
 const Layout = ({ children, scroll }) => {

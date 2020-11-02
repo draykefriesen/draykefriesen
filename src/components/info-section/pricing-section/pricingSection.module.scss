@@ -32,10 +32,8 @@
   margin: 0 auto;
 }
 
-.pricing-main-header {
-  font-size: 3.5rem;
+.section-header {
   margin: 0 auto;
-  text-align: center;
   span {
     color: $primary-color-45;
   }
@@ -47,12 +45,6 @@
     @include mediaMd {
       display: block;
     }
-  }
-  @include mediaLg {
-    font-size: 3rem;
-  }
-  @include mediaSm {
-    font-size: 2.5rem;
   }
 }
 

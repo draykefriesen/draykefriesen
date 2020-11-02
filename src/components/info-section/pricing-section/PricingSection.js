@@ -13,9 +13,9 @@ const PricingSection = ({ pricingRef }) => {
   return (
     <section className={styles.sectionWrapper} ref={pricingRef}>
       <div className={styles.pricingMainTextArea}>
-        <h2 className={styles.pricingMainHeader}>
+        <h2 className={`section-header ${styles.sectionHeader}`}>
           <span>$0</span> Down,
-          <br className={styles.mdBreak} /> <span>$160</span> Per Month,{" "}
+          <br className={styles.mdBreak} /> <span>$160</span> Per Month,
           <br className={styles.alwaysBreak} />
           No Minimum Contract
         </h2>

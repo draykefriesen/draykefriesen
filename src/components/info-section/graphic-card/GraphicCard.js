@@ -8,8 +8,8 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io"
 const GraphicCard = ({ type, headerText, cardText, cardNumber }) => {
   return (
     <div className={`${styles.cardWrapper} ${styles[cardNumber]}`}>
-      <div className={`card ${styles.card}`}>
-        <div className={`border-top ${styles.borderTop}`}></div>
+      <div className={`${styles.card}`}>
+        <div className={`${styles.borderTop}`}></div>
         <h2 className={styles.cardHeader}>{headerText}</h2>
         <p className={styles.cardText}>{cardText}</p>
         <ul className={styles.textList}>

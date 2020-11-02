@@ -1,22 +1,14 @@
 @import "../../styles/config.module.scss";
+@import "../../styles/components/sectionGrid.module.scss";
 
-.section-wrapper {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+.section-grid {
+  @include sectionGrid;
   grid-template-rows: auto auto auto;
-  padding: 15rem 0 0 0;
-  @include mediaLg {
-    grid-template-columns: 15% 1fr 1fr 15%;
-  }
-  @include mediaMd {
-    grid-template-columns: 10% 1fr 1fr 10%;
-  }
 }
 
 .section-header {
-  grid-column: 1 / -1;
-  grid-row: 2;
+  @include sectionHeader;
+  margin: 0;
 }
 
 .illustrations-container {

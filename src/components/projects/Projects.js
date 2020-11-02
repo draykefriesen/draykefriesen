@@ -33,10 +33,7 @@ const Projects = ({ projectsSectionRef }) => {
   return (
     <section className={styles.projectsSection}>
       <BackgroundGradientTop section="projects" />
-      <h2
-        className={`section-header ${styles.sectionHeader}`}
-        ref={projectsSectionRef}
-      >
+      <h2 className="section-header" ref={projectsSectionRef}>
         Projects
       </h2>
       <div className={styles.projectsSlider}>
