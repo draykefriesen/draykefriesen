@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header/header"
 import Footer from "./Footer/Footer"
 import "../styles/normalize.scss"
-import "../styles/global.scss"
+import "../styles/main.scss"
 
 const Layout = ({ children, scroll }) => {
   const data = useStaticQuery(graphql`

@@ -8,22 +8,22 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io"
 const GraphicCard = ({ type, headerText, cardText, cardNumber }) => {
   return (
     <div className={`${styles.cardWrapper} ${styles[cardNumber]}`}>
-      <div className={`${styles.card}`}>
-        <div className={`${styles.borderTop}`}></div>
+      <div className={`card ${styles.card}`}>
+        <div className={`border-top`}></div>
         <h2 className={styles.cardHeader}>{headerText}</h2>
         <p className={styles.cardText}>{cardText}</p>
         <ul className={styles.textList}>
           {type === "web-dev" && (
             <>
-              <li className={styles.listItem}>
+              <li className={`list-item-flex ${styles.listItemFlex}`}>
                 <IoIosCheckmarkCircleOutline className={styles.icon} />
                 <p>Cutting Edge Technology</p>
               </li>
-              <li className={styles.listItem}>
+              <li className={`list-item-flex ${styles.listItemFlex}`}>
                 <IoIosCheckmarkCircleOutline className={styles.icon} />
                 <p>Pixel Perfect Precision</p>
               </li>
-              <li className={styles.listItem}>
+              <li className={`list-item-flex ${styles.listItemFlex}`}>
                 <IoIosCheckmarkCircleOutline className={styles.icon} />
                 <p>Custom Design</p>
               </li>
@@ -31,15 +31,15 @@ const GraphicCard = ({ type, headerText, cardText, cardNumber }) => {
           )}
           {type === "mobile" && (
             <>
-              <li className={styles.listItem}>
+              <li className={`list-item-flex ${styles.listItemFlex}`}>
                 <IoIosCheckmarkCircleOutline className={styles.icon} />
                 <p>Mobile First Design</p>
               </li>
-              <li className={styles.listItem}>
+              <li className={`list-item-flex ${styles.listItemFlex}`}>
                 <IoIosCheckmarkCircleOutline className={styles.icon} />
                 <p>High Performance</p>
               </li>
-              <li className={styles.listItem}>
+              <li className={`list-item-flex ${styles.listItemFlex}`}>
                 <IoIosCheckmarkCircleOutline className={styles.icon} />
                 <p>Tested Accross Devices</p>
               </li>
@@ -48,15 +48,15 @@ const GraphicCard = ({ type, headerText, cardText, cardNumber }) => {
 
           {type === "web-design" && (
             <>
-              <li className={styles.listItem}>
+              <li className={`list-item-flex ${styles.listItemFlex}`}>
                 <IoIosCheckmarkCircleOutline className={styles.icon} />
                 <p>Blog Templates</p>
               </li>
-              <li className={styles.listItem}>
+              <li className={`list-item-flex ${styles.listItemFlex}`}>
                 <IoIosCheckmarkCircleOutline className={styles.icon} />
                 <p>E-commerce integrations</p>
               </li>
-              <li className={styles.listItem}>
+              <li className={`list-item-flex ${styles.listItemFlex}`}>
                 <IoIosCheckmarkCircleOutline className={styles.icon} />
                 <p>Databases &amp; Serverless Functions </p>
               </li>

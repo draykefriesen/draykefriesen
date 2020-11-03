@@ -1,0 +1,23 @@
+@import "../config.scss";
+
+// List //
+.list-grid {
+  display: grid;
+  padding: 0;
+}
+
+// List item //
+.list-item-flex {
+  display: flex;
+  align-items: center;
+  p {
+    display: inline-block;
+    color: $grey-700;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: auto 0 0 0.3rem;
+    @include mediaMd {
+      font-size: 1rem;
+    }
+  }
+}

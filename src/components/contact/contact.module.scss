@@ -1,9 +1,4 @@
-@import "../../styles/config.module.scss";
-@import "../../styles/components/sectionGrid.module.scss";
-
-.section-grid {
-  @include sectionGrid;
-}
+@import "../../styles/config.scss";
 
 .contact-content {
   position: relative;
@@ -12,10 +7,6 @@
   flex-direction: column;
   padding: 15rem 0 4rem;
   margin-bottom: 10rem;
-}
-
-.section-header {
-  @include sectionHeader;
 }
 
 .card-wrapper {
@@ -78,7 +69,7 @@
 // position relative on contact-card to keep transformed sub-card in same stacking context
 .contact-card {
   position: relative;
-  display: inline-grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   background: $primary-color-10;
   border-radius: 5px;

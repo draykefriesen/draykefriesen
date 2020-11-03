@@ -33,10 +33,10 @@ const Contact = ({ contactCardRef }) => {
   }, [set, contactCardRef])
 
   return (
-    <section className={styles.sectionGrid}>
+    <section className="section-grid">
       <BackgroundGradientTop section="contact" />
       <div className={styles.contactContent}>
-        <h2 className={styles.sectionHeader} ref={contactCardRef}>
+        <h2 className="section-header" ref={contactCardRef}>
           Contact
         </h2>
         <div className={styles.cardWrapper}>

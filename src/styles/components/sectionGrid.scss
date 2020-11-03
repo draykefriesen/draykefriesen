@@ -1,6 +1,6 @@
-@import "../config.module.scss";
+@import "../config.scss";
 
-@mixin sectionGrid {
+.section-grid {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -13,7 +13,7 @@
   }
 }
 
-@mixin sectionHeader {
+.section-header {
   grid-column: 1 / -1;
   font-size: 3.5rem;
   font-weight: 700;

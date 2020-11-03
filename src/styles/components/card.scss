@@ -1,0 +1,36 @@
+@import "../config.scss";
+
+// Cards //
+
+.card {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}
+
+.grid-card {
+  display: grid;
+  margin: 0 auto;
+  padding: 0;
+  background: $primary-color-10;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+}
+
+// Card Border Top //
+
+.border-top {
+  height: 0.8rem;
+  width: 100%;
+  grid-column: 1 / -1;
+  background: linear-gradient(to right, $primary-color-15, $primary-color-20);
+  border-top-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+}
+
+// Card Header //
+
+.card-header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $grey-800;
+}

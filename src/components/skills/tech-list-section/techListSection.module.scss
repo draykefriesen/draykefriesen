@@ -1,48 +1,14 @@
-@import "../../../styles/config.module.scss";
+@import "../../../styles/config.scss";
 
-.tech-list-wrapper {
-  position: relative;
+.grid-card {
   grid-column: 2 / 4;
-  grid-row: 2;
-  width: 100%;
-  margin: 0 0 10rem;
-  @include mediaMd {
-    display: flex;
-  }
-}
-
-.tech-list-card {
-  position: relative;
-  display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(5, auto);
   width: 100%;
-  margin: 0;
-  padding: 0;
-  background: $primary-color-10;
-  box-shadow: $box-shadow;
-  box-sizing: border-box;
-  border-radius: 5px;
-  z-index: 100;
-  overflow: hidden;
-  @include mediaMd {
-    margin: 0 auto;
-  }
+  max-width: 1200px;
 }
 
-.border-top {
-  height: 0.8rem;
-  max-width: 100%;
-  grid-column: 1 / -1;
-  background: linear-gradient(to right, $primary-color-15, $primary-color-20);
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-.tech-title {
-  font-size: $tertiary-header;
-  font-weight: $bold;
-  color: $grey-800;
+.card-header {
   &:nth-of-type(1) {
     grid-column: 1;
     grid-row: 2;
@@ -61,13 +27,11 @@
   }
 }
 
-.tech-list {
-  display: grid;
+.list-grid {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   row-gap: 1.5rem;
   margin: 0 2rem 2rem 1.75rem;
-  padding: 0;
   &:nth-of-type(1) {
     grid-column: 1;
     grid-row: 3;
@@ -81,76 +45,34 @@
   }
 }
 
-.tech-list-item {
-  list-style: none;
-  display: flex;
-  align-items: center;
+.list-item-flex {
+  margin-left: 1rem;
   &:first-child {
-    grid-column: 1;
-    grid-row: 1;
+    margin-left: 0;
   }
-  &:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1;
-    @include mediaMd {
-      margin-left: 1rem;
-    }
+  &:nth-child(5n) {
+    margin-left: 0;
   }
-  &:nth-child(3) {
-    grid-column: 3;
-    grid-row: 1;
-    @include mediaMd {
-      margin-left: 1rem;
-    }
-  }
-  &:nth-child(4) {
-    grid-column: 4;
-    grid-row: 1;
-    @include mediaMd {
-      margin-left: 1rem;
-    }
-    @include mediaSm {
-      grid-column: 1;
-      grid-row: 2;
+  @include mediaSm {
+    &:nth-child(4n) {
       margin-left: 0;
     }
-  }
-  &:nth-child(5) {
-    grid-column: 1;
-    grid-row: 2;
-
-    @include mediaSm {
-      grid-column: 2;
-      grid-row: 2;
+    &:nth-child(5n) {
       margin-left: 1rem;
     }
   }
-
   p {
-    display: inline-block;
-    color: $grey-700;
-    font-size: 1.1rem;
-    font-weight: $medium;
-    margin: 0.2rem 0 0 0.3rem;
     white-space: nowrap;
-    @include mediaMd {
-      font-size: 1rem;
-    }
     @include mediaSm {
       font-size: 0.9rem;
     }
   }
 }
-
-.icon-wrapper {
-  border-radius: 50%;
-  display: inline-flex;
-}
-
-.tech-icon {
+.icon {
   color: $grey-600;
   width: 24px;
   height: 24px;
+  vertical-align: middle;
   @include mediaMd {
     width: 20px;
     height: 20px;

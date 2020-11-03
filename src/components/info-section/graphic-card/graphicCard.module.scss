@@ -1,6 +1,4 @@
-@import "../../../styles/config.module.scss";
-@import "../../../styles/components/card.module.scss";
-
+@import "../../../styles/config.scss";
 .card-wrapper {
   display: flex;
   flex-direction: column;
@@ -16,8 +14,8 @@
 }
 
 .card {
-  @include card;
   width: 325px;
+  background: linear-gradient(to bottom, $primary-color-1 80%, $grey-200 20%);
   padding-bottom: 8rem;
   margin: 0 auto;
   @include mediaLg {
@@ -29,11 +27,6 @@
   @include mediaSm {
     width: 300px;
   }
-}
-
-.border-top {
-  @include borderTop;
-  height: 0.8rem;
 }
 
 .card-one {
@@ -72,26 +65,19 @@
 
 .text-list {
   list-style: none;
+  margin: 1rem 0;
   padding: 0;
   height: 115px;
 }
 
-.list-item {
-  display: flex;
+.list-item-flex {
+  align-items: flex-start;
   padding: 0.4rem 3rem;
-  p {
-    color: $grey-700;
-    padding-left: 0.6rem;
-    font-size: 1rem;
-    font-weight: $medium;
-    margin: 0;
-  }
 }
 .icon {
   width: 20px;
   height: 20px;
   min-width: 20px;
-  margin-bottom: -4px;
   color: $primary-color-40;
 }
 

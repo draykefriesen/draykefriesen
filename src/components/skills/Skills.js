@@ -9,7 +9,7 @@ import styles from "./skills.module.scss"
 
 const Skills = ({ skillsSectionRef }) => {
   return (
-    <section className={styles.skillsSectionWrapper}>
+    <section className={`section-grid ${styles.sectionGrid}`}>
       <BackgroundGradientTop section="skills" />
       <h2 className="section-header" ref={skillsSectionRef}>
         Skills

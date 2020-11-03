@@ -1,13 +1,10 @@
-@import "../../styles/config.module.scss";
-@import "../../styles/components/sectionGrid.module.scss";
+@import "../../styles/config.scss";
 
 .section-grid {
-  @include sectionGrid;
   grid-template-rows: auto auto auto;
 }
 
 .section-header {
-  @include sectionHeader;
   margin: 0;
 }
 
