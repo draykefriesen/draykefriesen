@@ -11,7 +11,7 @@ import styles from "./pricingSection.module.scss"
 
 const PricingSection = ({ pricingRef }) => {
   return (
-    <section className={styles.sectionWrapper} ref={pricingRef}>
+    <section className={styles.sectionGrid} ref={pricingRef}>
       <div className={styles.pricingMainTextArea}>
         <h2 className={`section-header ${styles.sectionHeader}`}>
           <span>$0</span> Down,
